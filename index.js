@@ -1,4 +1,7 @@
 const { Parser } = require("json2csv");
+const fastCsv = require("fast-csv");
+const fs=require('fs');
+
 const swaggerData = require("./swagger-output.json");
 
 const { paths } = swaggerData;
@@ -32,7 +35,15 @@ try {
     const swaggerMethodsData = await start();
     const json2csvParser = new Parser();
     const csv = json2csvParser.parse(swaggerMethodsData);
-    console.log(csv);
+
+const ws = fs.createWriteStream("swaggerData.csv");
+fastCsv
+  .write(swaggerMethodsData, { headers: true })
+  .on("finish", function() {
+    console.log("Write to CSV successfully!");
+  })
+  .pipe(ws);
+    // console.log(csv);
   })();
 } catch (error) {
   console.error(error);

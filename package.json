@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/eval-team/swagger-to-csv#readme",
   "dependencies": {
+    "fast-csv": "^4.3.6",
     "json2csv": "^5.0.7"
   }
 }

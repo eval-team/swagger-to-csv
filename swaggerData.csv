@@ -1,0 +1,181 @@
+category,url,type
+Patient,/patient/{patientId},get
+Patient,/patient/{patientId},put
+Patient,/patient/,post
+Other,/resources,get
+Screening,/screeningResults,patch
+Other,/termsAgreement,post
+Screening,/screeningSurvey,get
+Other,/createOrder,patch
+Locations,/locations/search,post
+Locations,/locations/search,get
+Locations,/locations/searchByTimeAndGeoRange,post
+Other,/slots,post
+Appointment,/appointment/updateAvailability/,post
+Appointment,/appointment,post
+Appointment,/fetchAppointment,post
+Other,/checkResultExpiration,post
+Appointment,/checkAppointmentExpiration,post
+Appointment,/fetchEngagementFromAppointment,post
+Appointment,/appointment/{appointmentId},get
+Appointment,/appointment/{appointmentId}/reschedule,post
+Appointment,/appointment/{appointmentId}/cancel,put
+Vouchers,/vouchers/{voucherId},get
+Other,/cache/{cacheKey},get
+Other,/addresslookup,post
+Other,/standardizeNameForSearch,post
+Insurance,/insurance,post
+Insurance,/insurance/{insuranceId},put
+Insurance,/insuranceCompanies,get
+Insurance,/insuranceCompanies/{payerId},get
+Appointment,/appointment/hold,post
+Appointment,/appointment/hold/{appointmentId},put
+Other,/uilogger,post
+Vouchers,/vouchers/match,post
+Vouchers,/vouchers/updateUtilization,post
+Consent,/consent/search,post
+Consent,/consent/{engagementId},put
+Other,/drupal/cms,post
+Consent,/consent/getConsentPdfs/{engagementId},get
+Consent,/consent/createConsentPdfs,post
+Other,/fetchToken,post
+Results,/results/{engagementId}/fetch,post
+Results,/results/{engagementId}/labReports,post
+Smart Health Cards,/smartHealthCards/qr/{engagementId},get
+Smart Health Cards,/smartHealthCards/downloadCard/{engagementId},get
+Other,/testomnisysresult,patch
+Other,/postalinquiry,post
+Labcorp,/labcorpinquiry,post
+Labcorp,/labcorpresult,post
+Other,/setUiPayloadInCache,post
+Other,/insights/mmq/{engagementId},put
+Admin External Appointments,/admin/appointments/search,post
+Admin External Appointments,/admin/appointments/pdfbatch,post
+Admin External Appointments,/admin/appointments/cancelbatch,put
+Admin External Appointments,/admin/appointments/pdfblobexport,post
+Admin External Appointments,/admin/appointments/testtimeout,put
+Admin External Other,/admin/users,post
+Admin External Other,/admin/dbcommands,post
+Admin External DriveUp,/admin/driveup/engagements,post
+Admin External DriveUp,/admin/driveup/engagements/{engagementId},put
+Admin External DriveUp,/admin/driveup/engagements/{engagementId},delete
+Admin External Engagements,/admin/engagements/{engagementId}/results,post
+Admin External Other,/admin/locations,get
+Admin External DriveUp,/admin/driveup/registrations/{engagementId},get
+Admin External DriveUp,/admin/driveup/registrations/,post
+Admin External DriveUp,/admin/driveup/mailmerge,post
+Admin External DriveUp,/admin/driveup/mailmerge/uploadFilesToAzure,post
+Admin External DriveUp,/admin/driveup/mailmerge/checkdependencies,get
+Admin External DriveUp,/admin/driveup/mailmerge/updateTemplatesCache,get
+Admin External DriveUp,/admin/driveup/bulk/engagements,post
+Admin External DriveUp,/admin/driveup/patientengagements,post
+Admin External Reports,/admin/reports,get
+Admin External Reports,/admin/reports/{reportId},get
+Admin External Reports,/admin/reports/{reportId},post
+Admin Other,/admin/testmodels/,get
+Admin External Other,/admin/resultmaps/{mapName},get
+Admin External Sites,/admin/sites/search,post
+Admin External Other,/admin/sitesSearch,get
+Admin External Sites,/admin/sites/translateUiToSvc,put
+Admin External Sites,/admin/sites,put
+Admin External Sites,/admin/sites,post
+Admin External Sites,/admin/sites/{storeNumber},get
+Admin External Sites,/admin/sites/bulk,post
+Admin External Sites,/admin/sites/actions,patch
+Admin Vouchers,/admin/vouchers/groupsAndPlans,get
+Admin External Vouchers,/admin/vouchers/search,post
+Admin External Vouchers,/admin/vouchers/members/searchSchema,post
+Admin External Vouchers,/admin/vouchers,post
+Admin External Vouchers,/admin/vouchers/{voucherId},put
+Admin External Vouchers,/admin/vouchers/{voucherId},get
+Admin External Vouchers,/admin/vouchers/{voucherId}/members/{memberId},put
+Admin External Vouchers,/admin/vouchers/{voucherId}/members/{memberId},get
+Admin External Vouchers,/admin/vouchers/members/search,post
+Admin External Consents,/admin/consents,get
+Admin External Vouchers,/admin/vouchers/{voucherId}/members,get
+Admin External Vouchers,/admin/vouchers/match,post
+Admin External Vouchers,/admin/vouchers/members/delete,post
+Admin External Vouchers,/admin/vouchers/members/reactivate,post
+Admin External Vouchers,/admin/vouchers/members/bulk,post
+Admin External Other,/admin/sop,post
+Admin External Clients,/admin/clients,post
+Admin External Clients,/admin/clients,put
+Admin External Clients,/admin/clients,get
+Admin External Clients,/admin/clients/testTCSApi,post
+Admin External Clients,/admin/clients/{clientId},get
+Admin External Engagements,/admin/engagements/{engagementId}/laborder/approval,post
+Admin External Clients,/admin/clients/heriarchy,post
+Admin External Manage,/admin/manage/consents/,post
+Admin External Manage,/admin/manage/consents/{consentId},put
+Admin External Consents,/admin/consents/getConsentById/{consentId},get
+Admin External Other,/admin/consent/search,post
+Admin Other,/admin/singleResource,get
+Admin External Other,/admin/sendResultsEmails,post
+Admin External Other,/admin/orders/{engagementId},put
+Admin External DriveUp,/admin/driveup/uniqueId,get
+Admin External DriveUp,/admin/driveup/patients/{patientId}/{engagementId}/count,get
+Admin External Other,/admin/checkAkvValue,post
+Admin External Other,/admin/dowloadAzureFile,get
+Admin External Other,/admin/patient/{engagementId},get
+Admin External Engagements,/admin/engagements/patients/{patientId},get
+Admin External Other,/admin/survey,get
+Admin Other,/admin/appointments,post
+Admin Requisitions,/admin/requisitions/{orderID},get
+Admin Requisitions,/admin/requisitions,patch
+Admin Requisitions,/admin/requisitions/movePwnFilesToBlob,patch
+Admin Other,/admin/backfill/appointmentmanagement,post
+Admin Other,/admin/testclasses,get
+Admin DriveUp,/admin/driveup/fixresults,post
+Admin DriveUp,/admin/driveup/undelete,post
+Admin Vouchers,/admin/vouchers/updateUtilization,post
+Admin Other,/admin/resources,get
+Admin Other,/admin/allowedAttributes,get
+Admin Other,/admin/patientCoveredAttributes,get
+Admin Other,/admin/insurance/patientIdToEngagementId,post
+Admin Other,/admin/wagLabOrders/allocateIds,post
+Curbside Pickup Order,/order/,post
+Heart Beat Instance,/,get
+Heart Beat Instance,/details,get
+Immunization ConsolidatedRoster,/consolidatedRoster/search,post
+IVR External,/engagement/search,post
+IVR External,/resendEmail,post
+Internal Other,/ordernotification/{partnerOrderId},put
+Internal Other,/replayresultedorder/{partnerOrderId},put
+Internal Other,/sendEmail,post
+Internal Other,/covidorderresults/encrypt,post
+Internal Other,/covidconfig/{configName},get
+Internal Other,/covidorderresultscopy,post
+Internal Other,/backfillcollectiondate,post
+Internal Other,/savephysiciandetails,post
+Internal Other,/updatebookingcount,post
+Internal Bulk Email,/bulkemail/sendreminders,post
+Internal Bulk Email,/bulkemail/sendresults,post
+Internal Bulk Email,/bulkemail/sendconfirmationemails,post
+Internal Other,/clearCache/{cacheKey},get
+Internal Other,/testRedisLocalCache,post
+Internal Other,/initLocalCache,post
+Internal Other,/extractMongoSchema,post
+Internal Other,/aegis/resultnotification/{partnerOrderId},put
+Internal Medical Billing,/medicalBilling/retryOrderSend,post
+Internal Medical Billing,/medicalBilling/retryResultSend,post
+Internal Other,/localThresholdMStest,post
+Internal Other,/generateOrderRequestObject,post
+Internal Other,/backfillTestId,post
+Internal Other,/fetchEngagementKey,post
+Internal Other,/labcorp/processResults,post
+Internal Other,/checkLabCorpEnvs,get
+Partner Other,/vouchers/getRoleAndClientsForUser,get
+Partner Other,/vouchers/clients/hierarchy,post
+Partner Other,/vouchers/clientById,post
+Partner Other,/vouchers/all,post
+Partner Members,/vouchers/members,post
+Partner Members,/vouchers/members/consent,post
+Partner Other,/vouchers/listActivity,post
+Partner Members,/vouchers/members/detail,post
+Partner Test,/vouchers/test/results,post
+Partner Test,/vouchers/test/adoption,post
+Partner Members,/vouchers/members/bulk,post
+Partner Members,/vouchers/members/delete,post
+Partner External,/vouchers/external/report/redis/unlock,get
+Partner External,/vouchers/external/report,get
+Partner Test,/vouchers/test/bwell,post
