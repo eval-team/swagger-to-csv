@@ -5,6 +5,7 @@ const { paths } = swaggerData;
 let url = "";
 let type = "";
 let category = "";
+let description = "";
 
 async function getSwaggerData(pathsObj) {
   const dataList = [];
@@ -13,10 +14,12 @@ async function getSwaggerData(pathsObj) {
       url = path;
       type = method;
       category = pathsObj[path][method].tags[0];
+      description = pathsObj[path][method].description;
       dataList.push({
         category,
-        url,
         type,
+        url,
+        description
       });
     }
   }
