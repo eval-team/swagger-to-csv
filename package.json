@@ -1,0 +1,22 @@
+{
+  "name": "swagger-to-csv",
+  "version": "1.0.0",
+  "description": "--",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eval-team/swagger-to-csv.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eval-team/swagger-to-csv/issues"
+  },
+  "homepage": "https://github.com/eval-team/swagger-to-csv#readme",
+  "dependencies": {
+    "json2csv": "^5.0.7"
+  }
+}
