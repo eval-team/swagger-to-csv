@@ -1,181 +1,181 @@
-category,url,type
-Patient,/patient/{patientId},get
-Patient,/patient/{patientId},put
-Patient,/patient/,post
-Other,/resources,get
-Screening,/screeningResults,patch
-Other,/termsAgreement,post
-Screening,/screeningSurvey,get
-Other,/createOrder,patch
-Locations,/locations/search,post
-Locations,/locations/search,get
-Locations,/locations/searchByTimeAndGeoRange,post
-Other,/slots,post
-Appointment,/appointment/updateAvailability/,post
-Appointment,/appointment,post
-Appointment,/fetchAppointment,post
-Other,/checkResultExpiration,post
-Appointment,/checkAppointmentExpiration,post
-Appointment,/fetchEngagementFromAppointment,post
-Appointment,/appointment/{appointmentId},get
-Appointment,/appointment/{appointmentId}/reschedule,post
-Appointment,/appointment/{appointmentId}/cancel,put
-Vouchers,/vouchers/{voucherId},get
-Other,/cache/{cacheKey},get
-Other,/addresslookup,post
-Other,/standardizeNameForSearch,post
-Insurance,/insurance,post
-Insurance,/insurance/{insuranceId},put
-Insurance,/insuranceCompanies,get
-Insurance,/insuranceCompanies/{payerId},get
-Appointment,/appointment/hold,post
-Appointment,/appointment/hold/{appointmentId},put
-Other,/uilogger,post
-Vouchers,/vouchers/match,post
-Vouchers,/vouchers/updateUtilization,post
-Consent,/consent/search,post
-Consent,/consent/{engagementId},put
-Other,/drupal/cms,post
-Consent,/consent/getConsentPdfs/{engagementId},get
-Consent,/consent/createConsentPdfs,post
-Other,/fetchToken,post
-Results,/results/{engagementId}/fetch,post
-Results,/results/{engagementId}/labReports,post
-Smart Health Cards,/smartHealthCards/qr/{engagementId},get
-Smart Health Cards,/smartHealthCards/downloadCard/{engagementId},get
-Other,/testomnisysresult,patch
-Other,/postalinquiry,post
-Labcorp,/labcorpinquiry,post
-Labcorp,/labcorpresult,post
-Other,/setUiPayloadInCache,post
-Other,/insights/mmq/{engagementId},put
-Admin External Appointments,/admin/appointments/search,post
-Admin External Appointments,/admin/appointments/pdfbatch,post
-Admin External Appointments,/admin/appointments/cancelbatch,put
-Admin External Appointments,/admin/appointments/pdfblobexport,post
-Admin External Appointments,/admin/appointments/testtimeout,put
-Admin External Other,/admin/users,post
-Admin External Other,/admin/dbcommands,post
-Admin External DriveUp,/admin/driveup/engagements,post
-Admin External DriveUp,/admin/driveup/engagements/{engagementId},put
-Admin External DriveUp,/admin/driveup/engagements/{engagementId},delete
-Admin External Engagements,/admin/engagements/{engagementId}/results,post
-Admin External Other,/admin/locations,get
-Admin External DriveUp,/admin/driveup/registrations/{engagementId},get
-Admin External DriveUp,/admin/driveup/registrations/,post
-Admin External DriveUp,/admin/driveup/mailmerge,post
-Admin External DriveUp,/admin/driveup/mailmerge/uploadFilesToAzure,post
-Admin External DriveUp,/admin/driveup/mailmerge/checkdependencies,get
-Admin External DriveUp,/admin/driveup/mailmerge/updateTemplatesCache,get
-Admin External DriveUp,/admin/driveup/bulk/engagements,post
-Admin External DriveUp,/admin/driveup/patientengagements,post
-Admin External Reports,/admin/reports,get
-Admin External Reports,/admin/reports/{reportId},get
-Admin External Reports,/admin/reports/{reportId},post
-Admin Other,/admin/testmodels/,get
-Admin External Other,/admin/resultmaps/{mapName},get
-Admin External Sites,/admin/sites/search,post
-Admin External Other,/admin/sitesSearch,get
-Admin External Sites,/admin/sites/translateUiToSvc,put
-Admin External Sites,/admin/sites,put
-Admin External Sites,/admin/sites,post
-Admin External Sites,/admin/sites/{storeNumber},get
-Admin External Sites,/admin/sites/bulk,post
-Admin External Sites,/admin/sites/actions,patch
-Admin Vouchers,/admin/vouchers/groupsAndPlans,get
-Admin External Vouchers,/admin/vouchers/search,post
-Admin External Vouchers,/admin/vouchers/members/searchSchema,post
-Admin External Vouchers,/admin/vouchers,post
-Admin External Vouchers,/admin/vouchers/{voucherId},put
-Admin External Vouchers,/admin/vouchers/{voucherId},get
-Admin External Vouchers,/admin/vouchers/{voucherId}/members/{memberId},put
-Admin External Vouchers,/admin/vouchers/{voucherId}/members/{memberId},get
-Admin External Vouchers,/admin/vouchers/members/search,post
-Admin External Consents,/admin/consents,get
-Admin External Vouchers,/admin/vouchers/{voucherId}/members,get
-Admin External Vouchers,/admin/vouchers/match,post
-Admin External Vouchers,/admin/vouchers/members/delete,post
-Admin External Vouchers,/admin/vouchers/members/reactivate,post
-Admin External Vouchers,/admin/vouchers/members/bulk,post
-Admin External Other,/admin/sop,post
-Admin External Clients,/admin/clients,post
-Admin External Clients,/admin/clients,put
-Admin External Clients,/admin/clients,get
-Admin External Clients,/admin/clients/testTCSApi,post
-Admin External Clients,/admin/clients/{clientId},get
-Admin External Engagements,/admin/engagements/{engagementId}/laborder/approval,post
-Admin External Clients,/admin/clients/heriarchy,post
-Admin External Manage,/admin/manage/consents/,post
-Admin External Manage,/admin/manage/consents/{consentId},put
-Admin External Consents,/admin/consents/getConsentById/{consentId},get
-Admin External Other,/admin/consent/search,post
-Admin Other,/admin/singleResource,get
-Admin External Other,/admin/sendResultsEmails,post
-Admin External Other,/admin/orders/{engagementId},put
-Admin External DriveUp,/admin/driveup/uniqueId,get
-Admin External DriveUp,/admin/driveup/patients/{patientId}/{engagementId}/count,get
-Admin External Other,/admin/checkAkvValue,post
-Admin External Other,/admin/dowloadAzureFile,get
-Admin External Other,/admin/patient/{engagementId},get
-Admin External Engagements,/admin/engagements/patients/{patientId},get
-Admin External Other,/admin/survey,get
-Admin Other,/admin/appointments,post
-Admin Requisitions,/admin/requisitions/{orderID},get
-Admin Requisitions,/admin/requisitions,patch
-Admin Requisitions,/admin/requisitions/movePwnFilesToBlob,patch
-Admin Other,/admin/backfill/appointmentmanagement,post
-Admin Other,/admin/testclasses,get
-Admin DriveUp,/admin/driveup/fixresults,post
-Admin DriveUp,/admin/driveup/undelete,post
-Admin Vouchers,/admin/vouchers/updateUtilization,post
-Admin Other,/admin/resources,get
-Admin Other,/admin/allowedAttributes,get
-Admin Other,/admin/patientCoveredAttributes,get
-Admin Other,/admin/insurance/patientIdToEngagementId,post
-Admin Other,/admin/wagLabOrders/allocateIds,post
-Curbside Pickup Order,/order/,post
-Heart Beat Instance,/,get
-Heart Beat Instance,/details,get
-Immunization ConsolidatedRoster,/consolidatedRoster/search,post
-IVR External,/engagement/search,post
-IVR External,/resendEmail,post
-Internal Other,/ordernotification/{partnerOrderId},put
-Internal Other,/replayresultedorder/{partnerOrderId},put
-Internal Other,/sendEmail,post
-Internal Other,/covidorderresults/encrypt,post
-Internal Other,/covidconfig/{configName},get
-Internal Other,/covidorderresultscopy,post
-Internal Other,/backfillcollectiondate,post
-Internal Other,/savephysiciandetails,post
-Internal Other,/updatebookingcount,post
-Internal Bulk Email,/bulkemail/sendreminders,post
-Internal Bulk Email,/bulkemail/sendresults,post
-Internal Bulk Email,/bulkemail/sendconfirmationemails,post
-Internal Other,/clearCache/{cacheKey},get
-Internal Other,/testRedisLocalCache,post
-Internal Other,/initLocalCache,post
-Internal Other,/extractMongoSchema,post
-Internal Other,/aegis/resultnotification/{partnerOrderId},put
-Internal Medical Billing,/medicalBilling/retryOrderSend,post
-Internal Medical Billing,/medicalBilling/retryResultSend,post
-Internal Other,/localThresholdMStest,post
-Internal Other,/generateOrderRequestObject,post
-Internal Other,/backfillTestId,post
-Internal Other,/fetchEngagementKey,post
-Internal Other,/labcorp/processResults,post
-Internal Other,/checkLabCorpEnvs,get
-Partner Other,/vouchers/getRoleAndClientsForUser,get
-Partner Other,/vouchers/clients/hierarchy,post
-Partner Other,/vouchers/clientById,post
-Partner Other,/vouchers/all,post
-Partner Members,/vouchers/members,post
-Partner Members,/vouchers/members/consent,post
-Partner Other,/vouchers/listActivity,post
-Partner Members,/vouchers/members/detail,post
-Partner Test,/vouchers/test/results,post
-Partner Test,/vouchers/test/adoption,post
-Partner Members,/vouchers/members/bulk,post
-Partner Members,/vouchers/members/delete,post
-Partner External,/vouchers/external/report/redis/unlock,get
-Partner External,/vouchers/external/report,get
-Partner Test,/vouchers/test/bwell,post
+category,type,url,description
+Patient,get,/patient/{patientId},Lab scheduling: get patient profile
+Patient,put,/patient/{patientId},Lab scheduling: patient profile updating
+Patient,post,/patient/,Lab scheduling: patient profile creation
+Other,get,/resources,Get all resources
+Screening,patch,/screeningResults,Lab scheduling: screening survey
+Other,post,/termsAgreement,Lab scheduling: Terms agreement API
+Screening,get,/screeningSurvey,Lab scheduling: Get survey questionnaire API
+Other,patch,/createOrder,Lab scheduling: Create order API
+Locations,post,/locations/search,Previously used post call for getting the list of locations. Still needed to handle parameters other then updateDate.
+Locations,get,/locations/search,Converted from locations/search post to get endpoint to handle akmai configuration bug
+Locations,post,/locations/searchByTimeAndGeoRange,Returns slots within N miles for specified location and in specific date/time range. See searchByTimeAndGeoRangeInputValidator for parameters.
+Other,post,/slots,Returns configured slots for specified location and priority
+Appointment,post,/appointment/updateAvailability/,Updates availability for specified store
+Appointment,post,/appointment,"Books an appointment, or appointment from held."
+Appointment,post,/fetchAppointment,Lab scheduling: fetches appointment data. Made from Get appointment for security reasons.
+Other,post,/checkResultExpiration,Check Result Expiration
+Appointment,post,/checkAppointmentExpiration,Check Appointment Expiration
+Appointment,post,/fetchEngagementFromAppointment,Temporary helper endpoint to get engagementId from appointmentId.
+Appointment,get,/appointment/{appointmentId},Lab scheduling: Get appointment. Obsolete.
+Appointment,post,/appointment/{appointmentId}/reschedule,Lab scheduling: Reschedule appointment
+Appointment,put,/appointment/{appointmentId}/cancel,Lab scheduling: Cancel appointment. Handles both Hard cancel and Soft cancel.
+Vouchers,get,/vouchers/{voucherId},Get all vouchers by voucherId
+Other,get,/cache/{cacheKey},Lab scheduling: get patient profile
+Other,post,/addresslookup,validate ZIP API - Wrapper for google maps API
+Other,post,/standardizeNameForSearch,FIC-4526 - COVID-19 Testing - lastNameForSearch implementation
+Insurance,post,/insurance,Add patient insurance
+Insurance,put,/insurance/{insuranceId},Update patient insurance
+Insurance,get,/insuranceCompanies,Insurance: Fetch All Insurance Companies
+Insurance,get,/insuranceCompanies/{payerId},Insurance: Fetch Insurance Company Details
+Appointment,post,/appointment/hold,Lab scheduling: Hold appointment
+Appointment,put,/appointment/hold/{appointmentId},Lab scheduling: Hold appointment
+Other,post,/uilogger,Lab scheduling: UI Error Logger
+Vouchers,post,/vouchers/match,"Matches specified group, plan, optional access code and member fields to response contains several root attributes that are conditional based on the outcome of the match operation."
+Vouchers,post,/vouchers/updateUtilization,"OBSOLETE. Will be removed later, and only used to notify on moved endpoint."
+Consent,post,/consent/search,
+Consent,put,/consent/{engagementId},
+Other,post,/drupal/cms,
+Consent,get,/consent/getConsentPdfs/{engagementId},Gets previously created consent Pdfs for specified engagementId
+Consent,post,/consent/createConsentPdfs,Creates or downloads and then merges concent Pdf files based on Voucher to get list of consents to generate.
+Other,post,/fetchToken,"Validates test result notification email by validating DOB based on results/:engagementId/fetch, but takes engagement OR appontmentId, and uses body instead of get."
+Results,post,/results/{engagementId}/fetch,Validates test result notification email by validating DOB
+Results,post,/results/{engagementId}/labReports,PUBLIC endpoint for retreiving lab reports after validating DOB
+Smart Health Cards,get,/smartHealthCards/qr/{engagementId},
+Smart Health Cards,get,/smartHealthCards/downloadCard/{engagementId},
+Other,patch,/testomnisysresult,
+Other,post,/postalinquiry,Returns at home testing eligibility flag for a specified zip code
+Labcorp,post,/labcorpinquiry,"Test endpoint to generate HL7 message, to be removed"
+Labcorp,post,/labcorpresult,"Test endpoint to process result HL7 message, to be removed"
+Other,post,/setUiPayloadInCache,sets UI Payload specified in CovidPatientDataUI cache
+Other,put,/insights/mmq/{engagementId},
+Admin External Appointments,post,/admin/appointments/search,Admin tool: Search the appointment details
+Admin External Appointments,post,/admin/appointments/pdfbatch,Admin tool: generate composite PDF for the appointments
+Admin External Appointments,put,/admin/appointments/cancelbatch,Admin tool: batch cancel of appointments
+Admin External Appointments,post,/admin/appointments/pdfblobexport,
+Admin External Appointments,put,/admin/appointments/testtimeout,
+Admin External Other,post,/admin/users,
+Admin External Other,post,/admin/dbcommands,
+Admin External DriveUp,post,/admin/driveup/engagements,DriveUp Portal: Create DriveUp Engagememant API
+Admin External DriveUp,put,/admin/driveup/engagements/{engagementId},DriveUp Portal: Update DriveUp Engagement
+Admin External DriveUp,delete,/admin/driveup/engagements/{engagementId},DriveUp Portal: Delete DriveUp Engagement
+Admin External Engagements,post,/admin/engagements/{engagementId}/results,Portal Post Results for Engagement
+Admin External Other,get,/admin/locations,
+Admin External DriveUp,get,/admin/driveup/registrations/{engagementId},
+Admin External DriveUp,post,/admin/driveup/registrations/,
+Admin External DriveUp,post,/admin/driveup/mailmerge,
+Admin External DriveUp,post,/admin/driveup/mailmerge/uploadFilesToAzure,"uploadFilesToAzure loads files from local file system to cloud, in situations when you have problems writing to the cloud otherwise"
+Admin External DriveUp,get,/admin/driveup/mailmerge/checkdependencies,
+Admin External DriveUp,get,/admin/driveup/mailmerge/updateTemplatesCache,
+Admin External DriveUp,post,/admin/driveup/bulk/engagements,DriveUp Portal: Create K-12 DriveUp Engagement API
+Admin External DriveUp,post,/admin/driveup/patientengagements,DriveUp Portal: Create DriveUp Engagement for an existing Patient API
+Admin External Reports,get,/admin/reports,
+Admin External Reports,get,/admin/reports/{reportId},
+Admin External Reports,post,/admin/reports/{reportId},
+Admin Other,get,/admin/testmodels/,Get TestingModels
+Admin External Other,get,/admin/resultmaps/{mapName},Get Resultmaps
+Admin External Sites,post,/admin/sites/search,Search the covid test sites collection with multiple critera
+Admin External Other,get,/admin/sitesSearch,Search the covid test sites collection thjrough get
+Admin External Sites,put,/admin/sites/translateUiToSvc,"Service endpoint just calling translateUiToSvc with required UI schema, and optional allowed sites list and debugLog"
+Admin External Sites,put,/admin/sites,Update test site fields
+Admin External Sites,post,/admin/sites,Add new test site
+Admin External Sites,get,/admin/sites/{storeNumber},Search test site using storeNumber
+Admin External Sites,post,/admin/sites/bulk,
+Admin External Sites,patch,/admin/sites/actions,
+Admin Vouchers,get,/admin/vouchers/groupsAndPlans,
+Admin External Vouchers,post,/admin/vouchers/search,
+Admin External Vouchers,post,/admin/vouchers/members/searchSchema,
+Admin External Vouchers,post,/admin/vouchers,
+Admin External Vouchers,put,/admin/vouchers/{voucherId},
+Admin External Vouchers,get,/admin/vouchers/{voucherId},
+Admin External Vouchers,put,/admin/vouchers/{voucherId}/members/{memberId},
+Admin External Vouchers,get,/admin/vouchers/{voucherId}/members/{memberId},
+Admin External Vouchers,post,/admin/vouchers/members/search,
+Admin External Consents,get,/admin/consents,
+Admin External Vouchers,get,/admin/vouchers/{voucherId}/members,
+Admin External Vouchers,post,/admin/vouchers/match,
+Admin External Vouchers,post,/admin/vouchers/members/delete,Bulk soft delete voucher members by groupId or planId
+Admin External Vouchers,post,/admin/vouchers/members/reactivate,
+Admin External Vouchers,post,/admin/vouchers/members/bulk,Bulk upload voucher members by groupId or planId
+Admin External Other,post,/admin/sop,
+Admin External Clients,post,/admin/clients,Add new covidClient
+Admin External Clients,put,/admin/clients,Update covidClient
+Admin External Clients,get,/admin/clients,
+Admin External Clients,post,/admin/clients/testTCSApi,Test various methods to update TCS
+Admin External Clients,get,/admin/clients/{clientId},Search client
+Admin External Engagements,post,/admin/engagements/{engagementId}/laborder/approval,
+Admin External Clients,post,/admin/clients/heriarchy,
+Admin External Manage,post,/admin/manage/consents/,
+Admin External Manage,put,/admin/manage/consents/{consentId},
+Admin External Consents,get,/admin/consents/getConsentById/{consentId},
+Admin External Other,post,/admin/consent/search,
+Admin Other,get,/admin/singleResource,
+Admin External Other,post,/admin/sendResultsEmails,
+Admin External Other,put,/admin/orders/{engagementId},Update order
+Admin External DriveUp,get,/admin/driveup/uniqueId,Get next available uniqueId for driveup
+Admin External DriveUp,get,/admin/driveup/patients/{patientId}/{engagementId}/count,Get count of other viable engagements under same patientId
+Admin External Other,post,/admin/checkAkvValue,
+Admin External Other,get,/admin/dowloadAzureFile,
+Admin External Other,get,/admin/patient/{engagementId},
+Admin External Engagements,get,/admin/engagements/patients/{patientId},
+Admin External Other,get,/admin/survey,
+Admin Other,post,/admin/appointments,Admin tool: Fetch the appointment details
+Admin Requisitions,get,/admin/requisitions/{orderID},Admin tool: Fetch the Order requisition PDF
+Admin Requisitions,patch,/admin/requisitions,Admin tool: Prod support API to get PWN requisition PDF and save in DB
+Admin Requisitions,patch,/admin/requisitions/movePwnFilesToBlob,"Admin tool: Prod support API to copy PWN requisition from PDF from and save in DB expects either startDate/endDate, or engagementIds as parameters."
+Admin Other,post,/admin/backfill/appointmentmanagement,"Appointment Management MVP (FIC-4009, FIC-4010)"
+Admin Other,get,/admin/testclasses,Get TestingClasses
+Admin DriveUp,post,/admin/driveup/fixresults,Post driveups fix results
+Admin DriveUp,post,/admin/driveup/undelete,Post driveups undelete
+Admin Vouchers,post,/admin/vouchers/updateUtilization,"Updates Utilization info either in batch mode, or for specified voucher/member"
+Admin Other,get,/admin/resources,
+Admin Other,get,/admin/allowedAttributes,
+Admin Other,get,/admin/patientCoveredAttributes,
+Admin Other,post,/admin/insurance/patientIdToEngagementId,
+Admin Other,post,/admin/wagLabOrders/allocateIds,
+Curbside Pickup Order,post,/order/,
+Heart Beat Instance,get,/,
+Heart Beat Instance,get,/details,
+Immunization ConsolidatedRoster,post,/consolidatedRoster/search,
+IVR External,post,/engagement/search,
+IVR External,post,/resendEmail,
+Internal Other,put,/ordernotification/{partnerOrderId},Lab scheduling: partner order decision update
+Internal Other,put,/replayresultedorder/{partnerOrderId},
+Internal Other,post,/sendEmail,
+Internal Other,post,/covidorderresults/encrypt,
+Internal Other,get,/covidconfig/{configName},
+Internal Other,post,/covidorderresultscopy,
+Internal Other,post,/backfillcollectiondate,
+Internal Other,post,/savephysiciandetails,
+Internal Other,post,/updatebookingcount,
+Internal Bulk Email,post,/bulkemail/sendreminders,
+Internal Bulk Email,post,/bulkemail/sendresults,
+Internal Bulk Email,post,/bulkemail/sendconfirmationemails,
+Internal Other,get,/clearCache/{cacheKey},
+Internal Other,post,/testRedisLocalCache,
+Internal Other,post,/initLocalCache,
+Internal Other,post,/extractMongoSchema,Extract Mongo Schema schema for specified collections
+Internal Other,put,/aegis/resultnotification/{partnerOrderId},Lab scheduling: aegis result notification
+Internal Medical Billing,post,/medicalBilling/retryOrderSend,
+Internal Medical Billing,post,/medicalBilling/retryResultSend,
+Internal Other,post,/localThresholdMStest,
+Internal Other,post,/generateOrderRequestObject,
+Internal Other,post,/backfillTestId,
+Internal Other,post,/fetchEngagementKey,
+Internal Other,post,/labcorp/processResults,LabCorp process results
+Internal Other,get,/checkLabCorpEnvs,
+Partner Other,get,/vouchers/getRoleAndClientsForUser,Fetch client hierarchy traversal client
+Partner Other,post,/vouchers/clients/hierarchy,Fetch client hierarchy traversal client
+Partner Other,post,/vouchers/clientById,Fetch clientByName by client
+Partner Other,post,/vouchers/all,"Fetch vouchers all, or by planIdt"
+Partner Members,post,/vouchers/members,Fetch voucher members by groupId or planId
+Partner Members,post,/vouchers/members/consent,Fetch voucher members and consent data by groupId or planId
+Partner Other,post,/vouchers/listActivity,
+Partner Members,post,/vouchers/members/detail,
+Partner Test,post,/vouchers/test/results,Fetch voucher test tracking by groupId or planId
+Partner Test,post,/vouchers/test/adoption,Fetch voucher test tracking by groupId or planId
+Partner Members,post,/vouchers/members/bulk,Bulk upload voucher members by groupId or planId
+Partner Members,post,/vouchers/members/delete,Bulk soft delete voucher members by groupId or planId
+Partner External,get,/vouchers/external/report/redis/unlock,
+Partner External,get,/vouchers/external/report,
+Partner Test,post,/vouchers/test/bwell,
