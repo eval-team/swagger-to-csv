@@ -1,4 +1,3 @@
-const { Parser } = require("json2csv");
 const fastCsv = require("fast-csv");
 const fs = require("fs");
 
