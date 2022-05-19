@@ -9,7 +9,7 @@ let type = "";
 let category = "";
 let description = "";
 
-const getSwaggerData=async(pathsObj)=> {
+async function getSwaggerData(pathsObj) {
   const dataList = [];
   for (let path in pathsObj) {
     for (let method in pathsObj[path]) {
@@ -28,10 +28,13 @@ const getSwaggerData=async(pathsObj)=> {
   return dataList;
 }
 
+function start() {
+  return getSwaggerData(paths);
+}
 
 try {
   (async () => {
-    const swaggerMethodsData = await getSwaggerData();
+    const swaggerMethodsData = await start();
     const ws = fs.createWriteStream("swaggerData.csv");
     fastCsv
       .write(swaggerMethodsData, { headers: true })

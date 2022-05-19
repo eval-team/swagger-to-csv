@@ -164,7 +164,7 @@
     "application/json"
   ],
   "paths": {
-    "/patient/{patientId}": {
+    "/findcarecovidsvc/svc/v2/scheduling/patient/:patientId": {
       "get": {
         "tags": [
           "Patient"
@@ -172,12 +172,6 @@
         "summary": "Lab scheduling: get patient profile",
         "description": "Lab scheduling: get patient profile",
         "parameters": [
-          {
-            "name": "patientId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
           {
             "name": "transactionId",
             "in": "header",
@@ -197,12 +191,6 @@
         "summary": "Lab scheduling: patient profile updating",
         "description": "Lab scheduling: patient profile updating",
         "parameters": [
-          {
-            "name": "patientId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
           {
             "name": "transactionId",
             "in": "header",
@@ -234,7 +222,7 @@
         }
       }
     },
-    "/patient/": {
+    "/findcarecovidsvc/svc/v2/scheduling/patient/": {
       "post": {
         "tags": [
           "Patient"
@@ -284,7 +272,7 @@
         }
       }
     },
-    "/resources": {
+    "/findcarecovidsvc/svc/v2/scheduling/resources": {
       "get": {
         "tags": [
           "Other"
@@ -310,7 +298,7 @@
         }
       }
     },
-    "/screeningResults": {
+    "/findcarecovidsvc/svc/v2/scheduling/screeningResults": {
       "patch": {
         "tags": [
           "Screening"
@@ -349,7 +337,7 @@
         }
       }
     },
-    "/termsAgreement": {
+    "/findcarecovidsvc/svc/v2/scheduling/termsAgreement": {
       "post": {
         "tags": [
           "Other"
@@ -390,7 +378,7 @@
         }
       }
     },
-    "/screeningSurvey": {
+    "/findcarecovidsvc/svc/v2/scheduling/screeningSurvey": {
       "get": {
         "tags": [
           "Screening"
@@ -411,7 +399,7 @@
         }
       }
     },
-    "/createOrder": {
+    "/findcarecovidsvc/svc/v2/scheduling/createOrder": {
       "patch": {
         "tags": [
           "Other"
@@ -444,7 +432,7 @@
         }
       }
     },
-    "/locations/search": {
+    "/findcarecovidsvc/svc/v2/scheduling/locations/search": {
       "post": {
         "tags": [
           "Locations"
@@ -484,7 +472,7 @@
         }
       }
     },
-    "/locations/searchByTimeAndGeoRange": {
+    "/findcarecovidsvc/svc/v2/scheduling/locations/searchByTimeAndGeoRange": {
       "post": {
         "tags": [
           "Locations"
@@ -535,7 +523,7 @@
         }
       }
     },
-    "/slots": {
+    "/findcarecovidsvc/svc/v2/scheduling/slots": {
       "post": {
         "tags": [
           "Other"
@@ -568,7 +556,7 @@
         }
       }
     },
-    "/appointment/updateAvailability/": {
+    "/findcarecovidsvc/svc/v2/scheduling/appointment/updateAvailability/": {
       "post": {
         "tags": [
           "Appointment"
@@ -604,7 +592,7 @@
         }
       }
     },
-    "/appointment": {
+    "/findcarecovidsvc/svc/v2/scheduling/appointment": {
       "post": {
         "tags": [
           "Appointment"
@@ -655,7 +643,7 @@
         }
       }
     },
-    "/fetchAppointment": {
+    "/findcarecovidsvc/svc/v2/scheduling/fetchAppointment": {
       "post": {
         "tags": [
           "Appointment"
@@ -696,7 +684,7 @@
         }
       }
     },
-    "/checkResultExpiration": {
+    "/findcarecovidsvc/svc/v2/scheduling/checkResultExpiration": {
       "post": {
         "tags": [
           "Other"
@@ -729,7 +717,7 @@
         }
       }
     },
-    "/checkAppointmentExpiration": {
+    "/findcarecovidsvc/svc/v2/scheduling/checkAppointmentExpiration": {
       "post": {
         "tags": [
           "Appointment"
@@ -765,7 +753,7 @@
         }
       }
     },
-    "/fetchEngagementFromAppointment": {
+    "/findcarecovidsvc/svc/v2/scheduling/fetchEngagementFromAppointment": {
       "post": {
         "tags": [
           "Appointment"
@@ -798,7 +786,7 @@
         }
       }
     },
-    "/appointment/{appointmentId}": {
+    "/findcarecovidsvc/svc/v2/scheduling/appointment/:appointmentId": {
       "get": {
         "tags": [
           "Appointment"
@@ -806,12 +794,6 @@
         "summary": "Lab scheduling: Get appointment. Obsolete.",
         "description": "Lab scheduling: Get appointment. Obsolete.",
         "parameters": [
-          {
-            "name": "appointmentId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
           {
             "name": "transactionId",
             "in": "header",
@@ -825,7 +807,7 @@
         }
       }
     },
-    "/appointment/{appointmentId}/reschedule": {
+    "/findcarecovidsvc/svc/v2/scheduling/appointment/:appointmentId/reschedule": {
       "post": {
         "tags": [
           "Appointment"
@@ -833,12 +815,6 @@
         "summary": "Lab scheduling: Reschedule appointment",
         "description": "Lab scheduling: Reschedule appointment",
         "parameters": [
-          {
-            "name": "appointmentId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
           {
             "name": "transactionId",
             "in": "header",
@@ -876,7 +852,7 @@
         }
       }
     },
-    "/appointment/{appointmentId}/cancel": {
+    "/findcarecovidsvc/svc/v2/scheduling/appointment/:appointmentId/cancel": {
       "put": {
         "tags": [
           "Appointment"
@@ -885,12 +861,6 @@
         "description": "Lab scheduling: Cancel appointment. Handles both Hard cancel and Soft cancel.",
         "parameters": [
           {
-            "name": "appointmentId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
             "name": "transactionId",
             "in": "header",
             "type": "string"
@@ -903,7 +873,7 @@
         }
       }
     },
-    "/vouchers/{voucherId}": {
+    "/findcarecovidsvc/svc/v2/scheduling/vouchers/:voucherId": {
       "get": {
         "tags": [
           "Vouchers"
@@ -912,12 +882,6 @@
         "description": "Get all vouchers by voucherId",
         "parameters": [
           {
-            "name": "voucherId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
             "name": "transactionId",
             "in": "header",
             "type": "string"
@@ -930,7 +894,7 @@
         }
       }
     },
-    "/cache/{cacheKey}": {
+    "/findcarecovidsvc/svc/v2/scheduling/cache/:cacheKey": {
       "get": {
         "tags": [
           "Other"
@@ -939,12 +903,6 @@
         "description": "Lab scheduling: get patient profile",
         "parameters": [
           {
-            "name": "cacheKey",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
             "name": "transactionId",
             "in": "header",
             "type": "string"
@@ -957,7 +915,7 @@
         }
       }
     },
-    "/addresslookup": {
+    "/findcarecovidsvc/svc/v2/scheduling/addresslookup": {
       "post": {
         "tags": [
           "Other"
@@ -978,7 +936,7 @@
         }
       }
     },
-    "/standardizeNameForSearch": {
+    "/findcarecovidsvc/svc/v2/scheduling/standardizeNameForSearch": {
       "post": {
         "tags": [
           "Other"
@@ -999,7 +957,7 @@
         }
       }
     },
-    "/insurance": {
+    "/findcarecovidsvc/svc/v2/scheduling/insurance": {
       "post": {
         "tags": [
           "Insurance"
@@ -1032,7 +990,7 @@
         }
       }
     },
-    "/insurance/{insuranceId}": {
+    "/findcarecovidsvc/svc/v2/scheduling/insurance/:insuranceId": {
       "put": {
         "tags": [
           "Insurance"
@@ -1040,12 +998,6 @@
         "summary": "Update patient insurance",
         "description": "Update patient insurance",
         "parameters": [
-          {
-            "name": "insuranceId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
           {
             "name": "transactionId",
             "in": "header",
@@ -1071,7 +1023,7 @@
         }
       }
     },
-    "/insuranceCompanies": {
+    "/findcarecovidsvc/svc/v2/scheduling/insuranceCompanies": {
       "get": {
         "tags": [
           "Insurance"
@@ -1102,7 +1054,7 @@
         }
       }
     },
-    "/insuranceCompanies/{payerId}": {
+    "/findcarecovidsvc/svc/v2/scheduling/insuranceCompanies/:payerId": {
       "get": {
         "tags": [
           "Insurance"
@@ -1110,12 +1062,6 @@
         "summary": "Insurance: Fetch Insurance Company Details",
         "description": "Insurance: Fetch Insurance Company Details",
         "parameters": [
-          {
-            "name": "payerId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
           {
             "name": "transactionId",
             "in": "header",
@@ -1129,7 +1075,7 @@
         }
       }
     },
-    "/appointment/hold": {
+    "/findcarecovidsvc/svc/v2/scheduling/appointment/hold": {
       "post": {
         "tags": [
           "Appointment"
@@ -1165,7 +1111,7 @@
         }
       }
     },
-    "/appointment/hold/{appointmentId}": {
+    "/findcarecovidsvc/svc/v2/scheduling/appointment/hold/:appointmentId": {
       "put": {
         "tags": [
           "Appointment"
@@ -1173,12 +1119,6 @@
         "summary": "Lab scheduling: Hold appointment",
         "description": "Lab scheduling: Hold appointment",
         "parameters": [
-          {
-            "name": "appointmentId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
           {
             "name": "transactionId",
             "in": "header",
@@ -1204,7 +1144,7 @@
         }
       }
     },
-    "/uilogger": {
+    "/findcarecovidsvc/svc/v2/scheduling/uilogger": {
       "post": {
         "tags": [
           "Other"
@@ -1237,7 +1177,7 @@
         }
       }
     },
-    "/vouchers/match": {
+    "/findcarecovidsvc/svc/v2/scheduling/vouchers/match": {
       "post": {
         "tags": [
           "Vouchers"
@@ -1279,7 +1219,7 @@
         }
       }
     },
-    "/vouchers/updateUtilization": {
+    "/findcarecovidsvc/svc/v2/scheduling/vouchers/updateUtilization": {
       "post": {
         "tags": [
           "Vouchers"
@@ -1300,7 +1240,7 @@
         }
       }
     },
-    "/consent/search": {
+    "/findcarecovidsvc/svc/v2/scheduling/consent/search": {
       "post": {
         "tags": [
           "Consent"
@@ -1321,7 +1261,7 @@
         }
       }
     },
-    "/consent/{engagementId}": {
+    "/findcarecovidsvc/svc/v2/scheduling/consent/:engagementId": {
       "put": {
         "tags": [
           "Consent"
@@ -1329,12 +1269,6 @@
         "summary": "",
         "description": "",
         "parameters": [
-          {
-            "name": "engagementId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
           {
             "name": "transactionId",
             "in": "header",
@@ -1348,7 +1282,7 @@
         }
       }
     },
-    "/drupal/cms": {
+    "/findcarecovidsvc/svc/v2/scheduling/drupal/cms": {
       "post": {
         "tags": [
           "Other"
@@ -1381,7 +1315,7 @@
         }
       }
     },
-    "/consent/getConsentPdfs/{engagementId}": {
+    "/findcarecovidsvc/svc/v2/scheduling/consent/getConsentPdfs/:engagementId": {
       "get": {
         "tags": [
           "Consent"
@@ -1392,12 +1326,6 @@
           "application/pdf"
         ],
         "parameters": [
-          {
-            "name": "engagementId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
           {
             "name": "transactionId",
             "in": "header",
@@ -1414,7 +1342,7 @@
         }
       }
     },
-    "/consent/createConsentPdfs": {
+    "/findcarecovidsvc/svc/v2/scheduling/consent/createConsentPdfs": {
       "post": {
         "tags": [
           "Consent"
@@ -1438,7 +1366,7 @@
         }
       }
     },
-    "/fetchToken": {
+    "/findcarecovidsvc/svc/v2/scheduling/fetchToken": {
       "post": {
         "tags": [
           "Other"
@@ -1477,7 +1405,7 @@
         }
       }
     },
-    "/results/{engagementId}/fetch": {
+    "/findcarecovidsvc/svc/v2/scheduling/results/:engagementId/fetch": {
       "post": {
         "tags": [
           "Results"
@@ -1485,12 +1413,6 @@
         "summary": "Validates test result notification email by validating DOB",
         "description": "Validates test result notification email by validating DOB",
         "parameters": [
-          {
-            "name": "engagementId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
           {
             "name": "transactionId",
             "in": "header",
@@ -1519,7 +1441,7 @@
         }
       }
     },
-    "/results/{engagementId}/labReports": {
+    "/findcarecovidsvc/svc/v2/scheduling/results/:engagementId/labReports": {
       "post": {
         "tags": [
           "Results"
@@ -1527,12 +1449,6 @@
         "summary": "PUBLIC endpoint for retreiving lab reports after validating DOB",
         "description": "PUBLIC endpoint for retreiving lab reports after validating DOB",
         "parameters": [
-          {
-            "name": "engagementId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
           {
             "name": "transactionId",
             "in": "header",
@@ -1575,7 +1491,7 @@
         }
       }
     },
-    "/smartHealthCards/qr/{engagementId}": {
+    "/findcarecovidsvc/svc/v2/scheduling/smartHealthCards/qr/:engagementId": {
       "get": {
         "tags": [
           "Smart Health Cards"
@@ -1587,12 +1503,6 @@
         ],
         "parameters": [
           {
-            "name": "engagementId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
             "name": "transactionId",
             "in": "header",
             "type": "string"
@@ -1608,7 +1518,7 @@
         }
       }
     },
-    "/smartHealthCards/downloadCard/{engagementId}": {
+    "/findcarecovidsvc/svc/v2/scheduling/smartHealthCards/downloadCard/:engagementId": {
       "get": {
         "tags": [
           "Smart Health Cards"
@@ -1620,12 +1530,6 @@
         ],
         "parameters": [
           {
-            "name": "engagementId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
             "name": "transactionId",
             "in": "header",
             "type": "string"
@@ -1641,7 +1545,7 @@
         }
       }
     },
-    "/testomnisysresult": {
+    "/findcarecovidsvc/svc/v2/scheduling/testomnisysresult": {
       "patch": {
         "tags": [
           "Other"
@@ -1674,7 +1578,7 @@
         }
       }
     },
-    "/postalinquiry": {
+    "/findcarecovidsvc/svc/v2/scheduling/postalinquiry": {
       "post": {
         "tags": [
           "Other"
@@ -1716,7 +1620,7 @@
         }
       }
     },
-    "/labcorpinquiry": {
+    "/findcarecovidsvc/svc/v2/scheduling/labcorpinquiry": {
       "post": {
         "tags": [
           "Labcorp"
@@ -1749,7 +1653,7 @@
         }
       }
     },
-    "/labcorpresult": {
+    "/findcarecovidsvc/svc/v2/scheduling/labcorpresult": {
       "post": {
         "tags": [
           "Labcorp"
@@ -1785,7 +1689,7 @@
         }
       }
     },
-    "/setUiPayloadInCache": {
+    "/findcarecovidsvc/svc/v2/scheduling/setUiPayloadInCache": {
       "post": {
         "tags": [
           "Other"
@@ -1818,7 +1722,7 @@
         }
       }
     },
-    "/insights/mmq/{engagementId}": {
+    "/findcarecovidsvc/svc/v2/scheduling/insights/mmq/:engagementId": {
       "put": {
         "tags": [
           "Other"
@@ -1826,12 +1730,6 @@
         "summary": "",
         "description": "",
         "parameters": [
-          {
-            "name": "engagementId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
           {
             "name": "transactionId",
             "in": "header",
@@ -1857,7 +1755,7 @@
         }
       }
     },
-    "/admin/appointments/search": {
+    "/findcarecovidsvc/svc/v2/portal/admin/appointments/search": {
       "post": {
         "tags": [
           "Admin External Appointments"
@@ -1878,7 +1776,7 @@
         }
       }
     },
-    "/admin/appointments/pdfbatch": {
+    "/findcarecovidsvc/svc/v2/portal/admin/appointments/pdfbatch": {
       "post": {
         "tags": [
           "Admin External Appointments"
@@ -1902,7 +1800,7 @@
         }
       }
     },
-    "/admin/appointments/cancelbatch": {
+    "/findcarecovidsvc/svc/v2/portal/admin/appointments/cancelbatch": {
       "put": {
         "tags": [
           "Admin External Appointments"
@@ -1926,7 +1824,7 @@
         }
       }
     },
-    "/admin/appointments/pdfblobexport": {
+    "/findcarecovidsvc/svc/v2/portal/admin/appointments/pdfblobexport": {
       "post": {
         "tags": [
           "Admin External Appointments"
@@ -1941,7 +1839,7 @@
         }
       }
     },
-    "/admin/appointments/testtimeout": {
+    "/findcarecovidsvc/svc/v2/portal/admin/appointments/testtimeout": {
       "put": {
         "tags": [
           "Admin External Appointments"
@@ -1980,7 +1878,7 @@
         }
       }
     },
-    "/admin/users": {
+    "/findcarecovidsvc/svc/v2/portal/admin/users": {
       "post": {
         "tags": [
           "Admin External Other"
@@ -2001,7 +1899,7 @@
         }
       }
     },
-    "/admin/dbcommands": {
+    "/findcarecovidsvc/svc/v2/portal/admin/dbcommands": {
       "post": {
         "tags": [
           "Admin External Other"
@@ -2022,7 +1920,7 @@
         }
       }
     },
-    "/admin/driveup/engagements": {
+    "/findcarecovidsvc/svc/v2/portal/admin/driveup/engagements": {
       "post": {
         "tags": [
           "Admin External DriveUp"
@@ -2067,7 +1965,7 @@
         }
       }
     },
-    "/admin/driveup/engagements/{engagementId}": {
+    "/findcarecovidsvc/svc/v2/portal/admin/driveup/engagements/:engagementId": {
       "put": {
         "tags": [
           "Admin External DriveUp"
@@ -2075,12 +1973,6 @@
         "summary": "DriveUp Portal: Update DriveUp Engagement",
         "description": "DriveUp Portal: Update DriveUp Engagement",
         "parameters": [
-          {
-            "name": "engagementId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
           {
             "name": "transactionId",
             "in": "header",
@@ -2122,12 +2014,6 @@
         "description": "DriveUp Portal: Delete DriveUp Engagement",
         "parameters": [
           {
-            "name": "engagementId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
             "name": "transactionId",
             "in": "header",
             "type": "string"
@@ -2140,7 +2026,7 @@
         }
       }
     },
-    "/admin/engagements/{engagementId}/results": {
+    "/findcarecovidsvc/svc/v2/portal/admin/engagements/:engagementId/results": {
       "post": {
         "tags": [
           "Admin External Engagements"
@@ -2148,12 +2034,6 @@
         "summary": "Portal Post Results for Engagement",
         "description": "Portal Post Results for Engagement",
         "parameters": [
-          {
-            "name": "engagementId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
           {
             "name": "transactionId",
             "in": "header",
@@ -2179,7 +2059,7 @@
         }
       }
     },
-    "/admin/locations": {
+    "/findcarecovidsvc/svc/v2/portal/admin/locations": {
       "get": {
         "tags": [
           "Admin External Other"
@@ -2200,7 +2080,7 @@
         }
       }
     },
-    "/admin/driveup/registrations/{engagementId}": {
+    "/findcarecovidsvc/svc/v2/portal/admin/driveup/registrations/:engagementId": {
       "get": {
         "tags": [
           "Admin External DriveUp"
@@ -2208,12 +2088,6 @@
         "summary": "",
         "description": "",
         "parameters": [
-          {
-            "name": "engagementId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
           {
             "name": "transactionId",
             "in": "header",
@@ -2227,7 +2101,7 @@
         }
       }
     },
-    "/admin/driveup/registrations/": {
+    "/findcarecovidsvc/svc/v2/portal/admin/driveup/registrations/": {
       "post": {
         "tags": [
           "Admin External DriveUp"
@@ -2248,7 +2122,7 @@
         }
       }
     },
-    "/admin/driveup/mailmerge": {
+    "/findcarecovidsvc/svc/v2/portal/admin/driveup/mailmerge": {
       "post": {
         "tags": [
           "Admin External DriveUp"
@@ -2284,7 +2158,7 @@
         }
       }
     },
-    "/admin/driveup/mailmerge/uploadFilesToAzure": {
+    "/findcarecovidsvc/svc/v2/portal/admin/driveup/mailmerge/uploadFilesToAzure": {
       "post": {
         "tags": [
           "Admin External DriveUp"
@@ -2323,7 +2197,7 @@
         }
       }
     },
-    "/admin/driveup/mailmerge/checkdependencies": {
+    "/findcarecovidsvc/svc/v2/portal/admin/driveup/mailmerge/checkdependencies": {
       "get": {
         "tags": [
           "Admin External DriveUp"
@@ -2344,7 +2218,7 @@
         }
       }
     },
-    "/admin/driveup/mailmerge/updateTemplatesCache": {
+    "/findcarecovidsvc/svc/v2/portal/admin/driveup/mailmerge/updateTemplatesCache": {
       "get": {
         "tags": [
           "Admin External DriveUp"
@@ -2365,7 +2239,7 @@
         }
       }
     },
-    "/admin/driveup/bulk/engagements": {
+    "/findcarecovidsvc/svc/v2/portal/admin/driveup/bulk/engagements": {
       "post": {
         "tags": [
           "Admin External DriveUp"
@@ -2403,7 +2277,7 @@
         }
       }
     },
-    "/admin/driveup/patientengagements": {
+    "/findcarecovidsvc/svc/v2/portal/admin/driveup/patientengagements": {
       "post": {
         "tags": [
           "Admin External DriveUp"
@@ -2442,7 +2316,7 @@
         }
       }
     },
-    "/admin/reports": {
+    "/findcarecovidsvc/svc/v2/portal/admin/reports": {
       "get": {
         "tags": [
           "Admin External Reports"
@@ -2463,7 +2337,7 @@
         }
       }
     },
-    "/admin/reports/{reportId}": {
+    "/findcarecovidsvc/svc/v2/portal/admin/reports/:reportId": {
       "get": {
         "tags": [
           "Admin External Reports"
@@ -2471,12 +2345,6 @@
         "summary": "",
         "description": "",
         "parameters": [
-          {
-            "name": "reportId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
           {
             "name": "transactionId",
             "in": "header",
@@ -2497,12 +2365,6 @@
         "description": "",
         "parameters": [
           {
-            "name": "reportId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
             "name": "transactionId",
             "in": "header",
             "type": "string"
@@ -2518,10 +2380,10 @@
         }
       }
     },
-    "/admin/testmodels/": {
+    "/findcarecovidsvc/svc/v2/portal/admin/testmodels/": {
       "get": {
         "tags": [
-          "Admin Other"
+          "Admin External Other"
         ],
         "summary": "Get TestingModels",
         "description": "Get TestingModels",
@@ -2539,7 +2401,7 @@
         }
       }
     },
-    "/admin/resultmaps/{mapName}": {
+    "/findcarecovidsvc/svc/v2/portal/admin/resultmaps/:mapName": {
       "get": {
         "tags": [
           "Admin External Other"
@@ -2547,12 +2409,6 @@
         "summary": "Get Resultmaps",
         "description": "Get Resultmaps",
         "parameters": [
-          {
-            "name": "mapName",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
           {
             "name": "transactionId",
             "in": "header",
@@ -2566,7 +2422,7 @@
         }
       }
     },
-    "/admin/sites/search": {
+    "/findcarecovidsvc/svc/v2/portal/admin/sites/search": {
       "post": {
         "tags": [
           "Admin External Sites"
@@ -2599,7 +2455,7 @@
         }
       }
     },
-    "/admin/sitesSearch": {
+    "/findcarecovidsvc/svc/v2/portal/admin/sitesSearch": {
       "get": {
         "tags": [
           "Admin External Other"
@@ -2620,7 +2476,7 @@
         }
       }
     },
-    "/admin/sites/translateUiToSvc": {
+    "/findcarecovidsvc/svc/v2/portal/admin/sites/translateUiToSvc": {
       "put": {
         "tags": [
           "Admin External Sites"
@@ -2653,7 +2509,7 @@
         }
       }
     },
-    "/admin/sites": {
+    "/findcarecovidsvc/svc/v2/portal/admin/sites": {
       "put": {
         "tags": [
           "Admin External Sites"
@@ -2693,7 +2549,7 @@
         }
       }
     },
-    "/admin/sites/{storeNumber}": {
+    "/findcarecovidsvc/svc/v2/portal/admin/sites/:storeNumber": {
       "get": {
         "tags": [
           "Admin External Sites"
@@ -2701,12 +2557,6 @@
         "summary": "Search test site using storeNumber",
         "description": "Search test site using storeNumber",
         "parameters": [
-          {
-            "name": "storeNumber",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
           {
             "name": "transactionId",
             "in": "header",
@@ -2720,7 +2570,7 @@
         }
       }
     },
-    "/admin/sites/bulk": {
+    "/findcarecovidsvc/svc/v2/portal/admin/sites/bulk": {
       "post": {
         "tags": [
           "Admin External Sites"
@@ -2741,7 +2591,7 @@
         }
       }
     },
-    "/admin/sites/actions": {
+    "/findcarecovidsvc/svc/v2/portal/admin/sites/actions": {
       "patch": {
         "tags": [
           "Admin External Sites"
@@ -2774,10 +2624,10 @@
         }
       }
     },
-    "/admin/vouchers/groupsAndPlans": {
+    "/findcarecovidsvc/svc/v2/portal/admin/vouchers/groupsAndPlans": {
       "get": {
         "tags": [
-          "Admin Vouchers"
+          "Admin External Vouchers"
         ],
         "summary": "",
         "description": "",
@@ -2791,6 +2641,11 @@
             "name": "membership",
             "in": "query",
             "type": "string"
+          },
+          {
+            "name": "clientId",
+            "in": "query",
+            "type": "string"
           }
         ],
         "responses": {
@@ -2800,7 +2655,7 @@
         }
       }
     },
-    "/admin/vouchers/search": {
+    "/findcarecovidsvc/svc/v2/portal/admin/vouchers/search": {
       "post": {
         "tags": [
           "Admin External Vouchers"
@@ -2821,7 +2676,7 @@
         }
       }
     },
-    "/admin/vouchers/members/searchSchema": {
+    "/findcarecovidsvc/svc/v2/portal/admin/vouchers/members/searchSchema": {
       "post": {
         "tags": [
           "Admin External Vouchers"
@@ -2842,7 +2697,7 @@
         }
       }
     },
-    "/admin/vouchers": {
+    "/findcarecovidsvc/svc/v2/portal/admin/vouchers": {
       "post": {
         "tags": [
           "Admin External Vouchers"
@@ -2863,7 +2718,7 @@
         }
       }
     },
-    "/admin/vouchers/{voucherId}": {
+    "/findcarecovidsvc/svc/v2/portal/admin/vouchers/:voucherId": {
       "put": {
         "tags": [
           "Admin External Vouchers"
@@ -2871,12 +2726,6 @@
         "summary": "",
         "description": "",
         "parameters": [
-          {
-            "name": "voucherId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
           {
             "name": "transactionId",
             "in": "header",
@@ -2897,12 +2746,6 @@
         "description": "",
         "parameters": [
           {
-            "name": "voucherId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
             "name": "transactionId",
             "in": "header",
             "type": "string"
@@ -2915,7 +2758,7 @@
         }
       }
     },
-    "/admin/vouchers/{voucherId}/members/{memberId}": {
+    "/findcarecovidsvc/svc/v2/portal/admin/vouchers/:voucherId/members/:memberId": {
       "put": {
         "tags": [
           "Admin External Vouchers"
@@ -2923,18 +2766,6 @@
         "summary": "",
         "description": "",
         "parameters": [
-          {
-            "name": "voucherId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "memberId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
           {
             "name": "transactionId",
             "in": "header",
@@ -2955,18 +2786,6 @@
         "description": "",
         "parameters": [
           {
-            "name": "voucherId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "memberId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
             "name": "transactionId",
             "in": "header",
             "type": "string"
@@ -2979,7 +2798,7 @@
         }
       }
     },
-    "/admin/vouchers/members/search": {
+    "/findcarecovidsvc/svc/v2/portal/admin/vouchers/members/search": {
       "post": {
         "tags": [
           "Admin External Vouchers"
@@ -3003,7 +2822,7 @@
         }
       }
     },
-    "/admin/consents": {
+    "/findcarecovidsvc/svc/v2/portal/admin/consents": {
       "get": {
         "tags": [
           "Admin External Consents"
@@ -3024,7 +2843,7 @@
         }
       }
     },
-    "/admin/vouchers/{voucherId}/members": {
+    "/findcarecovidsvc/svc/v2/portal/admin/vouchers/:voucherId/members": {
       "get": {
         "tags": [
           "Admin External Vouchers"
@@ -3032,12 +2851,6 @@
         "summary": "",
         "description": "",
         "parameters": [
-          {
-            "name": "voucherId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
           {
             "name": "transactionId",
             "in": "header",
@@ -3056,7 +2869,7 @@
         }
       }
     },
-    "/admin/vouchers/match": {
+    "/findcarecovidsvc/svc/v2/portal/admin/vouchers/match": {
       "post": {
         "tags": [
           "Admin External Vouchers"
@@ -3092,7 +2905,7 @@
         }
       }
     },
-    "/admin/vouchers/members/delete": {
+    "/findcarecovidsvc/svc/v2/portal/admin/vouchers/members/delete": {
       "post": {
         "tags": [
           "Admin External Vouchers"
@@ -3125,7 +2938,7 @@
         }
       }
     },
-    "/admin/vouchers/members/reactivate": {
+    "/findcarecovidsvc/svc/v2/portal/admin/vouchers/members/reactivate": {
       "post": {
         "tags": [
           "Admin External Vouchers"
@@ -3158,7 +2971,7 @@
         }
       }
     },
-    "/admin/vouchers/members/bulk": {
+    "/findcarecovidsvc/svc/v2/portal/admin/vouchers/members/bulk": {
       "post": {
         "tags": [
           "Admin External Vouchers"
@@ -3200,7 +3013,7 @@
         }
       }
     },
-    "/admin/sop": {
+    "/findcarecovidsvc/svc/v2/portal/admin/sop": {
       "post": {
         "tags": [
           "Admin External Other"
@@ -3233,7 +3046,7 @@
         }
       }
     },
-    "/admin/clients": {
+    "/findcarecovidsvc/svc/v2/portal/admin/clients": {
       "post": {
         "tags": [
           "Admin External Clients"
@@ -3338,7 +3151,7 @@
         }
       }
     },
-    "/admin/clients/testTCSApi": {
+    "/findcarecovidsvc/svc/v2/portal/admin/clients/testTCSApi": {
       "post": {
         "tags": [
           "Admin External Clients"
@@ -3359,7 +3172,7 @@
         }
       }
     },
-    "/admin/clients/{clientId}": {
+    "/findcarecovidsvc/svc/v2/portal/admin/clients/:clientId": {
       "get": {
         "tags": [
           "Admin External Clients"
@@ -3367,12 +3180,6 @@
         "summary": "Search client",
         "description": "Search client",
         "parameters": [
-          {
-            "name": "clientId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
           {
             "name": "transactionId",
             "in": "header",
@@ -3386,7 +3193,7 @@
         }
       }
     },
-    "/admin/engagements/{engagementId}/laborder/approval": {
+    "/findcarecovidsvc/svc/v2/portal/admin/engagements/:engagementId/laborder/approval": {
       "post": {
         "tags": [
           "Admin External Engagements"
@@ -3394,12 +3201,6 @@
         "summary": "",
         "description": "",
         "parameters": [
-          {
-            "name": "engagementId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
           {
             "name": "transtransactionIdzactionId",
             "in": "header",
@@ -3430,7 +3231,7 @@
         }
       }
     },
-    "/admin/clients/heriarchy": {
+    "/findcarecovidsvc/svc/v2/portal/admin/clients/heriarchy": {
       "post": {
         "tags": [
           "Admin External Clients"
@@ -3466,7 +3267,7 @@
         }
       }
     },
-    "/admin/manage/consents/": {
+    "/findcarecovidsvc/svc/v2/portal/admin/manage/consents/": {
       "post": {
         "tags": [
           "Admin External Manage"
@@ -3487,7 +3288,7 @@
         }
       }
     },
-    "/admin/manage/consents/{consentId}": {
+    "/findcarecovidsvc/svc/v2/portal/admin/manage/consents/:consentId": {
       "put": {
         "tags": [
           "Admin External Manage"
@@ -3496,12 +3297,6 @@
         "description": "",
         "parameters": [
           {
-            "name": "consentId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
             "name": "transactionId",
             "in": "header",
             "type": "string"
@@ -3514,7 +3309,7 @@
         }
       }
     },
-    "/admin/consents/getConsentById/{consentId}": {
+    "/findcarecovidsvc/svc/v2/portal/admin/consents/getConsentById/:consentId": {
       "get": {
         "tags": [
           "Admin External Consents"
@@ -3523,12 +3318,6 @@
         "description": "",
         "parameters": [
           {
-            "name": "consentId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
             "name": "transactionId",
             "in": "header",
             "type": "string"
@@ -3541,7 +3330,7 @@
         }
       }
     },
-    "/admin/consent/search": {
+    "/findcarecovidsvc/svc/v2/portal/admin/consent/search": {
       "post": {
         "tags": [
           "Admin External Other"
@@ -3562,10 +3351,10 @@
         }
       }
     },
-    "/admin/singleResource": {
+    "/findcarecovidsvc/svc/v2/portal/admin/singleResource": {
       "get": {
         "tags": [
-          "Admin Other"
+          "Admin External Other"
         ],
         "summary": "",
         "description": "",
@@ -3588,7 +3377,7 @@
         }
       }
     },
-    "/admin/sendResultsEmails": {
+    "/findcarecovidsvc/svc/v2/portal/admin/sendResultsEmails": {
       "post": {
         "tags": [
           "Admin External Other"
@@ -3621,7 +3410,7 @@
         }
       }
     },
-    "/admin/orders/{engagementId}": {
+    "/findcarecovidsvc/svc/v2/portal/admin/orders/:engagementId": {
       "put": {
         "tags": [
           "Admin External Other"
@@ -3629,12 +3418,6 @@
         "summary": "Update order",
         "description": "Update order",
         "parameters": [
-          {
-            "name": "engagementId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
           {
             "name": "transactionId",
             "in": "header",
@@ -3666,7 +3449,7 @@
         }
       }
     },
-    "/admin/driveup/uniqueId": {
+    "/findcarecovidsvc/svc/v2/portal/admin/driveup/uniqueId": {
       "get": {
         "tags": [
           "Admin External DriveUp"
@@ -3687,7 +3470,7 @@
         }
       }
     },
-    "/admin/driveup/patients/{patientId}/{engagementId}/count": {
+    "/findcarecovidsvc/svc/v2/portal/admin/driveup/patients/:patientId/:engagementId/count": {
       "get": {
         "tags": [
           "Admin External DriveUp"
@@ -3695,18 +3478,6 @@
         "summary": "Get count of other viable engagements under same patientId",
         "description": "Get count of other viable engagements under same patientId",
         "parameters": [
-          {
-            "name": "patientId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "engagementId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
           {
             "name": "transactionId",
             "in": "header",
@@ -3720,7 +3491,7 @@
         }
       }
     },
-    "/admin/checkAkvValue": {
+    "/findcarecovidsvc/svc/v2/portal/admin/checkAkvValue": {
       "post": {
         "tags": [
           "Admin External Other"
@@ -3741,7 +3512,7 @@
         }
       }
     },
-    "/admin/dowloadAzureFile": {
+    "/findcarecovidsvc/svc/v2/portal/admin/dowloadAzureFile": {
       "get": {
         "tags": [
           "Admin External Other"
@@ -3765,7 +3536,7 @@
         }
       }
     },
-    "/admin/patient/{engagementId}": {
+    "/findcarecovidsvc/svc/v2/portal/admin/patient/:engagementId": {
       "get": {
         "tags": [
           "Admin External Other"
@@ -3773,12 +3544,6 @@
         "summary": "",
         "description": "",
         "parameters": [
-          {
-            "name": "engagementId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
           {
             "name": "transactionId",
             "in": "header",
@@ -3792,7 +3557,7 @@
         }
       }
     },
-    "/admin/engagements/patients/{patientId}": {
+    "/findcarecovidsvc/svc/v2/portal/admin/engagements/patients/:patientId": {
       "get": {
         "tags": [
           "Admin External Engagements"
@@ -3801,12 +3566,6 @@
         "description": "",
         "parameters": [
           {
-            "name": "patientId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
             "name": "transactionId",
             "in": "header",
             "type": "string"
@@ -3819,7 +3578,7 @@
         }
       }
     },
-    "/admin/survey": {
+    "/findcarecovidsvc/svc/v2/portal/admin/survey": {
       "get": {
         "tags": [
           "Admin External Other"
@@ -3840,7 +3599,7 @@
         }
       }
     },
-    "/admin/appointments": {
+    "/findcarecovidsvc/int-svc/v2/portal/admin/appointments": {
       "post": {
         "tags": [
           "Admin Other"
@@ -3861,7 +3620,7 @@
         }
       }
     },
-    "/admin/requisitions/{orderID}": {
+    "/findcarecovidsvc/int-svc/v2/portal/admin/requisitions/:orderID": {
       "get": {
         "tags": [
           "Admin Requisitions"
@@ -3869,12 +3628,6 @@
         "summary": "Admin tool: Fetch the Order requisition PDF",
         "description": "Admin tool: Fetch the Order requisition PDF",
         "parameters": [
-          {
-            "name": "orderID",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
           {
             "name": "transactionId",
             "in": "header",
@@ -3888,7 +3641,7 @@
         }
       }
     },
-    "/admin/requisitions": {
+    "/findcarecovidsvc/int-svc/v2/portal/admin/requisitions": {
       "patch": {
         "tags": [
           "Admin Requisitions"
@@ -3909,7 +3662,7 @@
         }
       }
     },
-    "/admin/requisitions/movePwnFilesToBlob": {
+    "/findcarecovidsvc/int-svc/v2/portal/admin/requisitions/movePwnFilesToBlob": {
       "patch": {
         "tags": [
           "Admin Requisitions"
@@ -3963,7 +3716,7 @@
         }
       }
     },
-    "/admin/backfill/appointmentmanagement": {
+    "/findcarecovidsvc/int-svc/v2/portal/admin/backfill/appointmentmanagement": {
       "post": {
         "tags": [
           "Admin Other"
@@ -3996,7 +3749,28 @@
         }
       }
     },
-    "/admin/testclasses": {
+    "/findcarecovidsvc/int-svc/v2/portal/admin/testmodels/": {
+      "get": {
+        "tags": [
+          "Admin Other"
+        ],
+        "summary": "Get TestingModels",
+        "description": "Get TestingModels",
+        "parameters": [
+          {
+            "name": "transactionId",
+            "in": "header",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/findcarecovidsvc/int-svc/v2/portal/admin/testclasses": {
       "get": {
         "tags": [
           "Admin Other"
@@ -4017,7 +3791,7 @@
         }
       }
     },
-    "/admin/driveup/fixresults": {
+    "/findcarecovidsvc/int-svc/v2/portal/admin/driveup/fixresults": {
       "post": {
         "tags": [
           "Admin DriveUp"
@@ -4038,7 +3812,7 @@
         }
       }
     },
-    "/admin/driveup/undelete": {
+    "/findcarecovidsvc/int-svc/v2/portal/admin/driveup/undelete": {
       "post": {
         "tags": [
           "Admin DriveUp"
@@ -4059,7 +3833,7 @@
         }
       }
     },
-    "/admin/vouchers/updateUtilization": {
+    "/findcarecovidsvc/int-svc/v2/portal/admin/vouchers/updateUtilization": {
       "post": {
         "tags": [
           "Admin Vouchers"
@@ -4101,7 +3875,33 @@
         }
       }
     },
-    "/admin/resources": {
+    "/findcarecovidsvc/int-svc/v2/portal/admin/vouchers/groupsAndPlans": {
+      "get": {
+        "tags": [
+          "Admin Vouchers"
+        ],
+        "summary": "",
+        "description": "",
+        "parameters": [
+          {
+            "name": "transactionId",
+            "in": "header",
+            "type": "string"
+          },
+          {
+            "name": "membership",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/findcarecovidsvc/int-svc/v2/portal/admin/resources": {
       "get": {
         "tags": [
           "Admin Other"
@@ -4127,7 +3927,33 @@
         }
       }
     },
-    "/admin/allowedAttributes": {
+    "/findcarecovidsvc/int-svc/v2/portal/admin/singleResource": {
+      "get": {
+        "tags": [
+          "Admin Other"
+        ],
+        "summary": "",
+        "description": "",
+        "parameters": [
+          {
+            "name": "transactionId",
+            "in": "header",
+            "type": "string"
+          },
+          {
+            "name": "resource",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/findcarecovidsvc/int-svc/v2/portal/admin/allowedAttributes": {
       "get": {
         "tags": [
           "Admin Other"
@@ -4148,7 +3974,7 @@
         }
       }
     },
-    "/admin/patientCoveredAttributes": {
+    "/findcarecovidsvc/int-svc/v2/portal/admin/patientCoveredAttributes": {
       "get": {
         "tags": [
           "Admin Other"
@@ -4169,7 +3995,7 @@
         }
       }
     },
-    "/admin/insurance/patientIdToEngagementId": {
+    "/findcarecovidsvc/int-svc/v2/portal/admin/insurance/patientIdToEngagementId": {
       "post": {
         "tags": [
           "Admin Other"
@@ -4197,7 +4023,7 @@
         }
       }
     },
-    "/admin/wagLabOrders/allocateIds": {
+    "/findcarecovidsvc/int-svc/v2/portal/admin/wagLabOrders/allocateIds": {
       "post": {
         "tags": [
           "Admin Other"
@@ -4233,7 +4059,7 @@
         }
       }
     },
-    "/order/": {
+    "/findcarecovidsvc/svc/v2/curbside/order/": {
       "post": {
         "tags": [
           "Curbside Pickup Order"
@@ -4307,7 +4133,7 @@
         }
       }
     },
-    "/consolidatedRoster/search": {
+    "/findcarecovidsvc/int-svc/v2/immunization/consolidatedRoster/search": {
       "post": {
         "tags": [
           "Immunization ConsolidatedRoster"
@@ -4328,7 +4154,7 @@
         }
       }
     },
-    "/engagement/search": {
+    "/findcarecovidsvc/int-svc/v2/ivr/engagement/search": {
       "post": {
         "tags": [
           "IVR External"
@@ -4349,7 +4175,7 @@
         }
       }
     },
-    "/resendEmail": {
+    "/findcarecovidsvc/int-svc/v2/ivr/resendEmail": {
       "post": {
         "tags": [
           "IVR External"
@@ -4385,7 +4211,7 @@
         }
       }
     },
-    "/ordernotification/{partnerOrderId}": {
+    "/findcarecovidsvc/int-svc/v2/scheduling/ordernotification/:partnerOrderId": {
       "put": {
         "tags": [
           "Internal Other"
@@ -4393,12 +4219,6 @@
         "summary": "Lab scheduling: partner order decision update",
         "description": "Lab scheduling: partner order decision update",
         "parameters": [
-          {
-            "name": "partnerOrderId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
           {
             "name": "transactionId",
             "in": "header",
@@ -4429,7 +4249,7 @@
         }
       }
     },
-    "/replayresultedorder/{partnerOrderId}": {
+    "/findcarecovidsvc/int-svc/v2/scheduling/replayresultedorder/:partnerOrderId": {
       "put": {
         "tags": [
           "Internal Other"
@@ -4437,12 +4257,6 @@
         "summary": "",
         "description": "",
         "parameters": [
-          {
-            "name": "partnerOrderId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
           {
             "name": "transactionId",
             "in": "header",
@@ -4456,7 +4270,7 @@
         }
       }
     },
-    "/sendEmail": {
+    "/findcarecovidsvc/int-svc/v2/scheduling/sendEmail": {
       "post": {
         "tags": [
           "Internal Other"
@@ -4492,7 +4306,7 @@
         }
       }
     },
-    "/covidorderresults/encrypt": {
+    "/findcarecovidsvc/int-svc/v2/scheduling/covidorderresults/encrypt": {
       "post": {
         "tags": [
           "Internal Other"
@@ -4513,7 +4327,7 @@
         }
       }
     },
-    "/covidconfig/{configName}": {
+    "/findcarecovidsvc/int-svc/v2/scheduling/covidconfig/:configName": {
       "get": {
         "tags": [
           "Internal Other"
@@ -4521,12 +4335,6 @@
         "summary": "",
         "description": "",
         "parameters": [
-          {
-            "name": "configName",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
           {
             "name": "transactionId",
             "in": "header",
@@ -4540,7 +4348,7 @@
         }
       }
     },
-    "/covidorderresultscopy": {
+    "/findcarecovidsvc/int-svc/v2/scheduling/covidorderresultscopy": {
       "post": {
         "tags": [
           "Internal Other"
@@ -4582,7 +4390,7 @@
         }
       }
     },
-    "/backfillcollectiondate": {
+    "/findcarecovidsvc/int-svc/v2/scheduling/backfillcollectiondate": {
       "post": {
         "tags": [
           "Internal Other"
@@ -4624,7 +4432,7 @@
         }
       }
     },
-    "/savephysiciandetails": {
+    "/findcarecovidsvc/int-svc/v2/scheduling/savephysiciandetails": {
       "post": {
         "tags": [
           "Internal Other"
@@ -4657,7 +4465,7 @@
         }
       }
     },
-    "/updatebookingcount": {
+    "/findcarecovidsvc/int-svc/v2/scheduling/updatebookingcount": {
       "post": {
         "tags": [
           "Internal Other"
@@ -4696,7 +4504,7 @@
         }
       }
     },
-    "/bulkemail/sendreminders": {
+    "/findcarecovidsvc/int-svc/v2/scheduling/bulkemail/sendreminders": {
       "post": {
         "tags": [
           "Internal Bulk Email"
@@ -4720,7 +4528,7 @@
         }
       }
     },
-    "/bulkemail/sendresults": {
+    "/findcarecovidsvc/int-svc/v2/scheduling/bulkemail/sendresults": {
       "post": {
         "tags": [
           "Internal Bulk Email"
@@ -4744,7 +4552,7 @@
         }
       }
     },
-    "/bulkemail/sendconfirmationemails": {
+    "/findcarecovidsvc/int-svc/v2/scheduling/bulkemail/sendconfirmationemail": {
       "post": {
         "tags": [
           "Internal Bulk Email"
@@ -4768,7 +4576,7 @@
         }
       }
     },
-    "/clearCache/{cacheKey}": {
+    "/findcarecovidsvc/int-svc/v2/scheduling/clearCache/:cacheKey": {
       "get": {
         "tags": [
           "Internal Other"
@@ -4776,12 +4584,6 @@
         "summary": "",
         "description": "",
         "parameters": [
-          {
-            "name": "cacheKey",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
           {
             "name": "transactionId",
             "in": "header",
@@ -4800,7 +4602,7 @@
         }
       }
     },
-    "/testRedisLocalCache": {
+    "/findcarecovidsvc/int-svc/v2/scheduling/testRedisLocalCache": {
       "post": {
         "tags": [
           "Internal Other"
@@ -4836,7 +4638,7 @@
         }
       }
     },
-    "/initLocalCache": {
+    "/findcarecovidsvc/int-svc/v2/scheduling/initLocalCache": {
       "post": {
         "tags": [
           "Internal Other"
@@ -4869,7 +4671,7 @@
         }
       }
     },
-    "/extractMongoSchema": {
+    "/findcarecovidsvc/int-svc/v2/scheduling/extractMongoSchema": {
       "post": {
         "tags": [
           "Internal Other"
@@ -4908,7 +4710,7 @@
         }
       }
     },
-    "/aegis/resultnotification/{partnerOrderId}": {
+    "/findcarecovidsvc/int-svc/v2/scheduling/aegis/resultnotification/:partnerOrderId": {
       "put": {
         "tags": [
           "Internal Other"
@@ -4916,12 +4718,6 @@
         "summary": "Lab scheduling: aegis result notification",
         "description": "Lab scheduling: aegis result notification",
         "parameters": [
-          {
-            "name": "partnerOrderId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
           {
             "name": "transactionId",
             "in": "header",
@@ -4947,7 +4743,7 @@
         }
       }
     },
-    "/medicalBilling/retryOrderSend": {
+    "/findcarecovidsvc/int-svc/v2/scheduling/medicalBilling/retryOrderSend": {
       "post": {
         "tags": [
           "Internal Medical Billing"
@@ -4968,7 +4764,7 @@
         }
       }
     },
-    "/medicalBilling/retryResultSend": {
+    "/findcarecovidsvc/int-svc/v2/scheduling/medicalBilling/retryResultSend": {
       "post": {
         "tags": [
           "Internal Medical Billing"
@@ -4989,7 +4785,7 @@
         }
       }
     },
-    "/localThresholdMStest": {
+    "/findcarecovidsvc/int-svc/v2/scheduling/localThresholdMStest": {
       "post": {
         "tags": [
           "Internal Other"
@@ -5010,7 +4806,7 @@
         }
       }
     },
-    "/generateOrderRequestObject": {
+    "/findcarecovidsvc/int-svc/v2/scheduling/generateOrderRequestObject": {
       "post": {
         "tags": [
           "Internal Other"
@@ -5046,7 +4842,7 @@
         }
       }
     },
-    "/backfillTestId": {
+    "/findcarecovidsvc/int-svc/v2/scheduling/backfillTestId": {
       "post": {
         "tags": [
           "Internal Other"
@@ -5082,7 +4878,7 @@
         }
       }
     },
-    "/fetchEngagementKey": {
+    "/findcarecovidsvc/int-svc/v2/scheduling/fetchEngagementKey": {
       "post": {
         "tags": [
           "Internal Other"
@@ -5115,7 +4911,7 @@
         }
       }
     },
-    "/labcorp/processResults": {
+    "/findcarecovidsvc/int-svc/v2/scheduling/labcorp/processResults": {
       "post": {
         "tags": [
           "Internal Other"
@@ -5136,7 +4932,7 @@
         }
       }
     },
-    "/checkLabCorpEnvs": {
+    "/findcarecovidsvc/int-svc/v2/scheduling/checkLabCorpEnvs": {
       "get": {
         "tags": [
           "Internal Other"
@@ -5157,7 +4953,7 @@
         }
       }
     },
-    "/vouchers/getRoleAndClientsForUser": {
+    "/findcarecovidsvc/svc/v2/partner/vouchers/getRoleAndClientsForUser": {
       "get": {
         "tags": [
           "Partner Other"
@@ -5183,7 +4979,7 @@
         }
       }
     },
-    "/vouchers/clients/hierarchy": {
+    "/findcarecovidsvc/svc/v2/partner/vouchers/clients/hierarchy": {
       "post": {
         "tags": [
           "Partner Other"
@@ -5219,7 +5015,7 @@
         }
       }
     },
-    "/vouchers/clientById": {
+    "/findcarecovidsvc/svc/v2/partner/vouchers/clientById": {
       "post": {
         "tags": [
           "Partner Other"
@@ -5240,7 +5036,7 @@
         }
       }
     },
-    "/vouchers/all": {
+    "/findcarecovidsvc/svc/v2/partner/vouchers/all": {
       "post": {
         "tags": [
           "Partner Other"
@@ -5261,7 +5057,7 @@
         }
       }
     },
-    "/vouchers/members": {
+    "/findcarecovidsvc/svc/v2/partner/vouchers/members": {
       "post": {
         "tags": [
           "Partner Members"
@@ -5297,7 +5093,7 @@
         }
       }
     },
-    "/vouchers/members/consent": {
+    "/findcarecovidsvc/svc/v2/partner/vouchers/members/consent": {
       "post": {
         "tags": [
           "Partner Members"
@@ -5333,7 +5129,7 @@
         }
       }
     },
-    "/vouchers/listActivity": {
+    "/findcarecovidsvc/svc/v2/partner/vouchers/listActivity": {
       "post": {
         "tags": [
           "Partner Other"
@@ -5369,7 +5165,7 @@
         }
       }
     },
-    "/vouchers/members/detail": {
+    "/findcarecovidsvc/svc/v2/partner/vouchers/members/detail": {
       "post": {
         "tags": [
           "Partner Members"
@@ -5402,7 +5198,7 @@
         }
       }
     },
-    "/vouchers/test/results": {
+    "/findcarecovidsvc/svc/v2/partner/vouchers/test/results": {
       "post": {
         "tags": [
           "Partner Test"
@@ -5438,7 +5234,7 @@
         }
       }
     },
-    "/vouchers/test/adoption": {
+    "/findcarecovidsvc/svc/v2/partner/vouchers/test/adoption": {
       "post": {
         "tags": [
           "Partner Test"
@@ -5474,7 +5270,7 @@
         }
       }
     },
-    "/vouchers/members/bulk": {
+    "/findcarecovidsvc/svc/v2/partner/vouchers/members/bulk": {
       "post": {
         "tags": [
           "Partner Members"
@@ -5513,7 +5309,7 @@
         }
       }
     },
-    "/vouchers/members/delete": {
+    "/findcarecovidsvc/svc/v2/partner/vouchers/members/delete": {
       "post": {
         "tags": [
           "Partner Members"
@@ -5546,7 +5342,7 @@
         }
       }
     },
-    "/vouchers/external/report/redis/unlock": {
+    "/findcarecovidsvc/svc/v2/partner/vouchers/external/report/redis/unlock": {
       "get": {
         "tags": [
           "Partner External"
@@ -5561,7 +5357,7 @@
         }
       }
     },
-    "/vouchers/external/report": {
+    "/findcarecovidsvc/svc/v2/partner/vouchers/external/report": {
       "get": {
         "tags": [
           "Partner External"
@@ -5582,7 +5378,7 @@
         }
       }
     },
-    "/vouchers/test/bwell": {
+    "/findcarecovidsvc/svc/v2/partner/vouchers/test/bwell": {
       "post": {
         "tags": [
           "Partner Test"

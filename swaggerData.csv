@@ -1,0 +1,184 @@
+category,type,url,description
+Patient,get,/findcarecovidsvc/svc/v2/scheduling/patient/:patientId,Lab scheduling: get patient profile
+Patient,put,/findcarecovidsvc/svc/v2/scheduling/patient/:patientId,Lab scheduling: patient profile updating
+Patient,post,/findcarecovidsvc/svc/v2/scheduling/patient/,Lab scheduling: patient profile creation
+Other,get,/findcarecovidsvc/svc/v2/scheduling/resources,Get all resources
+Screening,patch,/findcarecovidsvc/svc/v2/scheduling/screeningResults,Lab scheduling: screening survey
+Other,post,/findcarecovidsvc/svc/v2/scheduling/termsAgreement,Lab scheduling: Terms agreement API
+Screening,get,/findcarecovidsvc/svc/v2/scheduling/screeningSurvey,Lab scheduling: Get survey questionnaire API
+Other,patch,/findcarecovidsvc/svc/v2/scheduling/createOrder,Lab scheduling: Create order API
+Locations,post,/findcarecovidsvc/svc/v2/scheduling/locations/search,Previously used post call for getting the list of locations. Still needed to handle parameters other then updateDate.
+Locations,get,/findcarecovidsvc/svc/v2/scheduling/locations/search,Converted from locations/search post to get endpoint to handle akmai configuration bug
+Locations,post,/findcarecovidsvc/svc/v2/scheduling/locations/searchByTimeAndGeoRange,Returns slots within N miles for specified location and in specific date/time range. See searchByTimeAndGeoRangeInputValidator for parameters.
+Other,post,/findcarecovidsvc/svc/v2/scheduling/slots,Returns configured slots for specified location and priority
+Appointment,post,/findcarecovidsvc/svc/v2/scheduling/appointment/updateAvailability/,Updates availability for specified store
+Appointment,post,/findcarecovidsvc/svc/v2/scheduling/appointment,"Books an appointment, or appointment from held."
+Appointment,post,/findcarecovidsvc/svc/v2/scheduling/fetchAppointment,Lab scheduling: fetches appointment data. Made from Get appointment for security reasons.
+Other,post,/findcarecovidsvc/svc/v2/scheduling/checkResultExpiration,Check Result Expiration
+Appointment,post,/findcarecovidsvc/svc/v2/scheduling/checkAppointmentExpiration,Check Appointment Expiration
+Appointment,post,/findcarecovidsvc/svc/v2/scheduling/fetchEngagementFromAppointment,Temporary helper endpoint to get engagementId from appointmentId.
+Appointment,get,/findcarecovidsvc/svc/v2/scheduling/appointment/:appointmentId,Lab scheduling: Get appointment. Obsolete.
+Appointment,post,/findcarecovidsvc/svc/v2/scheduling/appointment/:appointmentId/reschedule,Lab scheduling: Reschedule appointment
+Appointment,put,/findcarecovidsvc/svc/v2/scheduling/appointment/:appointmentId/cancel,Lab scheduling: Cancel appointment. Handles both Hard cancel and Soft cancel.
+Vouchers,get,/findcarecovidsvc/svc/v2/scheduling/vouchers/:voucherId,Get all vouchers by voucherId
+Other,get,/findcarecovidsvc/svc/v2/scheduling/cache/:cacheKey,Lab scheduling: get patient profile
+Other,post,/findcarecovidsvc/svc/v2/scheduling/addresslookup,validate ZIP API - Wrapper for google maps API
+Other,post,/findcarecovidsvc/svc/v2/scheduling/standardizeNameForSearch,FIC-4526 - COVID-19 Testing - lastNameForSearch implementation
+Insurance,post,/findcarecovidsvc/svc/v2/scheduling/insurance,Add patient insurance
+Insurance,put,/findcarecovidsvc/svc/v2/scheduling/insurance/:insuranceId,Update patient insurance
+Insurance,get,/findcarecovidsvc/svc/v2/scheduling/insuranceCompanies,Insurance: Fetch All Insurance Companies
+Insurance,get,/findcarecovidsvc/svc/v2/scheduling/insuranceCompanies/:payerId,Insurance: Fetch Insurance Company Details
+Appointment,post,/findcarecovidsvc/svc/v2/scheduling/appointment/hold,Lab scheduling: Hold appointment
+Appointment,put,/findcarecovidsvc/svc/v2/scheduling/appointment/hold/:appointmentId,Lab scheduling: Hold appointment
+Other,post,/findcarecovidsvc/svc/v2/scheduling/uilogger,Lab scheduling: UI Error Logger
+Vouchers,post,/findcarecovidsvc/svc/v2/scheduling/vouchers/match,"Matches specified group, plan, optional access code and member fields to response contains several root attributes that are conditional based on the outcome of the match operation."
+Vouchers,post,/findcarecovidsvc/svc/v2/scheduling/vouchers/updateUtilization,"OBSOLETE. Will be removed later, and only used to notify on moved endpoint."
+Consent,post,/findcarecovidsvc/svc/v2/scheduling/consent/search,
+Consent,put,/findcarecovidsvc/svc/v2/scheduling/consent/:engagementId,
+Other,post,/findcarecovidsvc/svc/v2/scheduling/drupal/cms,
+Consent,get,/findcarecovidsvc/svc/v2/scheduling/consent/getConsentPdfs/:engagementId,Gets previously created consent Pdfs for specified engagementId
+Consent,post,/findcarecovidsvc/svc/v2/scheduling/consent/createConsentPdfs,Creates or downloads and then merges concent Pdf files based on Voucher to get list of consents to generate.
+Other,post,/findcarecovidsvc/svc/v2/scheduling/fetchToken,"Validates test result notification email by validating DOB based on results/:engagementId/fetch, but takes engagement OR appontmentId, and uses body instead of get."
+Results,post,/findcarecovidsvc/svc/v2/scheduling/results/:engagementId/fetch,Validates test result notification email by validating DOB
+Results,post,/findcarecovidsvc/svc/v2/scheduling/results/:engagementId/labReports,PUBLIC endpoint for retreiving lab reports after validating DOB
+Smart Health Cards,get,/findcarecovidsvc/svc/v2/scheduling/smartHealthCards/qr/:engagementId,
+Smart Health Cards,get,/findcarecovidsvc/svc/v2/scheduling/smartHealthCards/downloadCard/:engagementId,
+Other,patch,/findcarecovidsvc/svc/v2/scheduling/testomnisysresult,
+Other,post,/findcarecovidsvc/svc/v2/scheduling/postalinquiry,Returns at home testing eligibility flag for a specified zip code
+Labcorp,post,/findcarecovidsvc/svc/v2/scheduling/labcorpinquiry,"Test endpoint to generate HL7 message, to be removed"
+Labcorp,post,/findcarecovidsvc/svc/v2/scheduling/labcorpresult,"Test endpoint to process result HL7 message, to be removed"
+Other,post,/findcarecovidsvc/svc/v2/scheduling/setUiPayloadInCache,sets UI Payload specified in CovidPatientDataUI cache
+Other,put,/findcarecovidsvc/svc/v2/scheduling/insights/mmq/:engagementId,
+Admin External Appointments,post,/findcarecovidsvc/svc/v2/portal/admin/appointments/search,Admin tool: Search the appointment details
+Admin External Appointments,post,/findcarecovidsvc/svc/v2/portal/admin/appointments/pdfbatch,Admin tool: generate composite PDF for the appointments
+Admin External Appointments,put,/findcarecovidsvc/svc/v2/portal/admin/appointments/cancelbatch,Admin tool: batch cancel of appointments
+Admin External Appointments,post,/findcarecovidsvc/svc/v2/portal/admin/appointments/pdfblobexport,
+Admin External Appointments,put,/findcarecovidsvc/svc/v2/portal/admin/appointments/testtimeout,
+Admin External Other,post,/findcarecovidsvc/svc/v2/portal/admin/users,
+Admin External Other,post,/findcarecovidsvc/svc/v2/portal/admin/dbcommands,
+Admin External DriveUp,post,/findcarecovidsvc/svc/v2/portal/admin/driveup/engagements,DriveUp Portal: Create DriveUp Engagememant API
+Admin External DriveUp,put,/findcarecovidsvc/svc/v2/portal/admin/driveup/engagements/:engagementId,DriveUp Portal: Update DriveUp Engagement
+Admin External DriveUp,delete,/findcarecovidsvc/svc/v2/portal/admin/driveup/engagements/:engagementId,DriveUp Portal: Delete DriveUp Engagement
+Admin External Engagements,post,/findcarecovidsvc/svc/v2/portal/admin/engagements/:engagementId/results,Portal Post Results for Engagement
+Admin External Other,get,/findcarecovidsvc/svc/v2/portal/admin/locations,
+Admin External DriveUp,get,/findcarecovidsvc/svc/v2/portal/admin/driveup/registrations/:engagementId,
+Admin External DriveUp,post,/findcarecovidsvc/svc/v2/portal/admin/driveup/registrations/,
+Admin External DriveUp,post,/findcarecovidsvc/svc/v2/portal/admin/driveup/mailmerge,
+Admin External DriveUp,post,/findcarecovidsvc/svc/v2/portal/admin/driveup/mailmerge/uploadFilesToAzure,"uploadFilesToAzure loads files from local file system to cloud, in situations when you have problems writing to the cloud otherwise"
+Admin External DriveUp,get,/findcarecovidsvc/svc/v2/portal/admin/driveup/mailmerge/checkdependencies,
+Admin External DriveUp,get,/findcarecovidsvc/svc/v2/portal/admin/driveup/mailmerge/updateTemplatesCache,
+Admin External DriveUp,post,/findcarecovidsvc/svc/v2/portal/admin/driveup/bulk/engagements,DriveUp Portal: Create K-12 DriveUp Engagement API
+Admin External DriveUp,post,/findcarecovidsvc/svc/v2/portal/admin/driveup/patientengagements,DriveUp Portal: Create DriveUp Engagement for an existing Patient API
+Admin External Reports,get,/findcarecovidsvc/svc/v2/portal/admin/reports,
+Admin External Reports,get,/findcarecovidsvc/svc/v2/portal/admin/reports/:reportId,
+Admin External Reports,post,/findcarecovidsvc/svc/v2/portal/admin/reports/:reportId,
+Admin External Other,get,/findcarecovidsvc/svc/v2/portal/admin/testmodels/,Get TestingModels
+Admin External Other,get,/findcarecovidsvc/svc/v2/portal/admin/resultmaps/:mapName,Get Resultmaps
+Admin External Sites,post,/findcarecovidsvc/svc/v2/portal/admin/sites/search,Search the covid test sites collection with multiple critera
+Admin External Other,get,/findcarecovidsvc/svc/v2/portal/admin/sitesSearch,Search the covid test sites collection thjrough get
+Admin External Sites,put,/findcarecovidsvc/svc/v2/portal/admin/sites/translateUiToSvc,"Service endpoint just calling translateUiToSvc with required UI schema, and optional allowed sites list and debugLog"
+Admin External Sites,put,/findcarecovidsvc/svc/v2/portal/admin/sites,Update test site fields
+Admin External Sites,post,/findcarecovidsvc/svc/v2/portal/admin/sites,Add new test site
+Admin External Sites,get,/findcarecovidsvc/svc/v2/portal/admin/sites/:storeNumber,Search test site using storeNumber
+Admin External Sites,post,/findcarecovidsvc/svc/v2/portal/admin/sites/bulk,
+Admin External Sites,patch,/findcarecovidsvc/svc/v2/portal/admin/sites/actions,
+Admin External Vouchers,get,/findcarecovidsvc/svc/v2/portal/admin/vouchers/groupsAndPlans,
+Admin External Vouchers,post,/findcarecovidsvc/svc/v2/portal/admin/vouchers/search,
+Admin External Vouchers,post,/findcarecovidsvc/svc/v2/portal/admin/vouchers/members/searchSchema,
+Admin External Vouchers,post,/findcarecovidsvc/svc/v2/portal/admin/vouchers,
+Admin External Vouchers,put,/findcarecovidsvc/svc/v2/portal/admin/vouchers/:voucherId,
+Admin External Vouchers,get,/findcarecovidsvc/svc/v2/portal/admin/vouchers/:voucherId,
+Admin External Vouchers,put,/findcarecovidsvc/svc/v2/portal/admin/vouchers/:voucherId/members/:memberId,
+Admin External Vouchers,get,/findcarecovidsvc/svc/v2/portal/admin/vouchers/:voucherId/members/:memberId,
+Admin External Vouchers,post,/findcarecovidsvc/svc/v2/portal/admin/vouchers/members/search,
+Admin External Consents,get,/findcarecovidsvc/svc/v2/portal/admin/consents,
+Admin External Vouchers,get,/findcarecovidsvc/svc/v2/portal/admin/vouchers/:voucherId/members,
+Admin External Vouchers,post,/findcarecovidsvc/svc/v2/portal/admin/vouchers/match,
+Admin External Vouchers,post,/findcarecovidsvc/svc/v2/portal/admin/vouchers/members/delete,Bulk soft delete voucher members by groupId or planId
+Admin External Vouchers,post,/findcarecovidsvc/svc/v2/portal/admin/vouchers/members/reactivate,
+Admin External Vouchers,post,/findcarecovidsvc/svc/v2/portal/admin/vouchers/members/bulk,Bulk upload voucher members by groupId or planId
+Admin External Other,post,/findcarecovidsvc/svc/v2/portal/admin/sop,
+Admin External Clients,post,/findcarecovidsvc/svc/v2/portal/admin/clients,Add new covidClient
+Admin External Clients,put,/findcarecovidsvc/svc/v2/portal/admin/clients,Update covidClient
+Admin External Clients,get,/findcarecovidsvc/svc/v2/portal/admin/clients,
+Admin External Clients,post,/findcarecovidsvc/svc/v2/portal/admin/clients/testTCSApi,Test various methods to update TCS
+Admin External Clients,get,/findcarecovidsvc/svc/v2/portal/admin/clients/:clientId,Search client
+Admin External Engagements,post,/findcarecovidsvc/svc/v2/portal/admin/engagements/:engagementId/laborder/approval,
+Admin External Clients,post,/findcarecovidsvc/svc/v2/portal/admin/clients/heriarchy,
+Admin External Manage,post,/findcarecovidsvc/svc/v2/portal/admin/manage/consents/,
+Admin External Manage,put,/findcarecovidsvc/svc/v2/portal/admin/manage/consents/:consentId,
+Admin External Consents,get,/findcarecovidsvc/svc/v2/portal/admin/consents/getConsentById/:consentId,
+Admin External Other,post,/findcarecovidsvc/svc/v2/portal/admin/consent/search,
+Admin External Other,get,/findcarecovidsvc/svc/v2/portal/admin/singleResource,
+Admin External Other,post,/findcarecovidsvc/svc/v2/portal/admin/sendResultsEmails,
+Admin External Other,put,/findcarecovidsvc/svc/v2/portal/admin/orders/:engagementId,Update order
+Admin External DriveUp,get,/findcarecovidsvc/svc/v2/portal/admin/driveup/uniqueId,Get next available uniqueId for driveup
+Admin External DriveUp,get,/findcarecovidsvc/svc/v2/portal/admin/driveup/patients/:patientId/:engagementId/count,Get count of other viable engagements under same patientId
+Admin External Other,post,/findcarecovidsvc/svc/v2/portal/admin/checkAkvValue,
+Admin External Other,get,/findcarecovidsvc/svc/v2/portal/admin/dowloadAzureFile,
+Admin External Other,get,/findcarecovidsvc/svc/v2/portal/admin/patient/:engagementId,
+Admin External Engagements,get,/findcarecovidsvc/svc/v2/portal/admin/engagements/patients/:patientId,
+Admin External Other,get,/findcarecovidsvc/svc/v2/portal/admin/survey,
+Admin Other,post,/findcarecovidsvc/int-svc/v2/portal/admin/appointments,Admin tool: Fetch the appointment details
+Admin Requisitions,get,/findcarecovidsvc/int-svc/v2/portal/admin/requisitions/:orderID,Admin tool: Fetch the Order requisition PDF
+Admin Requisitions,patch,/findcarecovidsvc/int-svc/v2/portal/admin/requisitions,Admin tool: Prod support API to get PWN requisition PDF and save in DB
+Admin Requisitions,patch,/findcarecovidsvc/int-svc/v2/portal/admin/requisitions/movePwnFilesToBlob,"Admin tool: Prod support API to copy PWN requisition from PDF from and save in DB expects either startDate/endDate, or engagementIds as parameters."
+Admin Other,post,/findcarecovidsvc/int-svc/v2/portal/admin/backfill/appointmentmanagement,"Appointment Management MVP (FIC-4009, FIC-4010)"
+Admin Other,get,/findcarecovidsvc/int-svc/v2/portal/admin/testmodels/,Get TestingModels
+Admin Other,get,/findcarecovidsvc/int-svc/v2/portal/admin/testclasses,Get TestingClasses
+Admin DriveUp,post,/findcarecovidsvc/int-svc/v2/portal/admin/driveup/fixresults,Post driveups fix results
+Admin DriveUp,post,/findcarecovidsvc/int-svc/v2/portal/admin/driveup/undelete,Post driveups undelete
+Admin Vouchers,post,/findcarecovidsvc/int-svc/v2/portal/admin/vouchers/updateUtilization,"Updates Utilization info either in batch mode, or for specified voucher/member"
+Admin Vouchers,get,/findcarecovidsvc/int-svc/v2/portal/admin/vouchers/groupsAndPlans,
+Admin Other,get,/findcarecovidsvc/int-svc/v2/portal/admin/resources,
+Admin Other,get,/findcarecovidsvc/int-svc/v2/portal/admin/singleResource,
+Admin Other,get,/findcarecovidsvc/int-svc/v2/portal/admin/allowedAttributes,
+Admin Other,get,/findcarecovidsvc/int-svc/v2/portal/admin/patientCoveredAttributes,
+Admin Other,post,/findcarecovidsvc/int-svc/v2/portal/admin/insurance/patientIdToEngagementId,
+Admin Other,post,/findcarecovidsvc/int-svc/v2/portal/admin/wagLabOrders/allocateIds,
+Curbside Pickup Order,post,/findcarecovidsvc/svc/v2/curbside/order/,
+Heart Beat Instance,get,/,
+Heart Beat Instance,get,/details,
+Immunization ConsolidatedRoster,post,/findcarecovidsvc/int-svc/v2/immunization/consolidatedRoster/search,
+IVR External,post,/findcarecovidsvc/int-svc/v2/ivr/engagement/search,
+IVR External,post,/findcarecovidsvc/int-svc/v2/ivr/resendEmail,
+Internal Other,put,/findcarecovidsvc/int-svc/v2/scheduling/ordernotification/:partnerOrderId,Lab scheduling: partner order decision update
+Internal Other,put,/findcarecovidsvc/int-svc/v2/scheduling/replayresultedorder/:partnerOrderId,
+Internal Other,post,/findcarecovidsvc/int-svc/v2/scheduling/sendEmail,
+Internal Other,post,/findcarecovidsvc/int-svc/v2/scheduling/covidorderresults/encrypt,
+Internal Other,get,/findcarecovidsvc/int-svc/v2/scheduling/covidconfig/:configName,
+Internal Other,post,/findcarecovidsvc/int-svc/v2/scheduling/covidorderresultscopy,
+Internal Other,post,/findcarecovidsvc/int-svc/v2/scheduling/backfillcollectiondate,
+Internal Other,post,/findcarecovidsvc/int-svc/v2/scheduling/savephysiciandetails,
+Internal Other,post,/findcarecovidsvc/int-svc/v2/scheduling/updatebookingcount,
+Internal Bulk Email,post,/findcarecovidsvc/int-svc/v2/scheduling/bulkemail/sendreminders,
+Internal Bulk Email,post,/findcarecovidsvc/int-svc/v2/scheduling/bulkemail/sendresults,
+Internal Bulk Email,post,/findcarecovidsvc/int-svc/v2/scheduling/bulkemail/sendconfirmationemail,
+Internal Other,get,/findcarecovidsvc/int-svc/v2/scheduling/clearCache/:cacheKey,
+Internal Other,post,/findcarecovidsvc/int-svc/v2/scheduling/testRedisLocalCache,
+Internal Other,post,/findcarecovidsvc/int-svc/v2/scheduling/initLocalCache,
+Internal Other,post,/findcarecovidsvc/int-svc/v2/scheduling/extractMongoSchema,Extract Mongo Schema schema for specified collections
+Internal Other,put,/findcarecovidsvc/int-svc/v2/scheduling/aegis/resultnotification/:partnerOrderId,Lab scheduling: aegis result notification
+Internal Medical Billing,post,/findcarecovidsvc/int-svc/v2/scheduling/medicalBilling/retryOrderSend,
+Internal Medical Billing,post,/findcarecovidsvc/int-svc/v2/scheduling/medicalBilling/retryResultSend,
+Internal Other,post,/findcarecovidsvc/int-svc/v2/scheduling/localThresholdMStest,
+Internal Other,post,/findcarecovidsvc/int-svc/v2/scheduling/generateOrderRequestObject,
+Internal Other,post,/findcarecovidsvc/int-svc/v2/scheduling/backfillTestId,
+Internal Other,post,/findcarecovidsvc/int-svc/v2/scheduling/fetchEngagementKey,
+Internal Other,post,/findcarecovidsvc/int-svc/v2/scheduling/labcorp/processResults,LabCorp process results
+Internal Other,get,/findcarecovidsvc/int-svc/v2/scheduling/checkLabCorpEnvs,
+Partner Other,get,/findcarecovidsvc/svc/v2/partner/vouchers/getRoleAndClientsForUser,Fetch client hierarchy traversal client
+Partner Other,post,/findcarecovidsvc/svc/v2/partner/vouchers/clients/hierarchy,Fetch client hierarchy traversal client
+Partner Other,post,/findcarecovidsvc/svc/v2/partner/vouchers/clientById,Fetch clientByName by client
+Partner Other,post,/findcarecovidsvc/svc/v2/partner/vouchers/all,"Fetch vouchers all, or by planIdt"
+Partner Members,post,/findcarecovidsvc/svc/v2/partner/vouchers/members,Fetch voucher members by groupId or planId
+Partner Members,post,/findcarecovidsvc/svc/v2/partner/vouchers/members/consent,Fetch voucher members and consent data by groupId or planId
+Partner Other,post,/findcarecovidsvc/svc/v2/partner/vouchers/listActivity,
+Partner Members,post,/findcarecovidsvc/svc/v2/partner/vouchers/members/detail,
+Partner Test,post,/findcarecovidsvc/svc/v2/partner/vouchers/test/results,Fetch voucher test tracking by groupId or planId
+Partner Test,post,/findcarecovidsvc/svc/v2/partner/vouchers/test/adoption,Fetch voucher test tracking by groupId or planId
+Partner Members,post,/findcarecovidsvc/svc/v2/partner/vouchers/members/bulk,Bulk upload voucher members by groupId or planId
+Partner Members,post,/findcarecovidsvc/svc/v2/partner/vouchers/members/delete,Bulk soft delete voucher members by groupId or planId
+Partner External,get,/findcarecovidsvc/svc/v2/partner/vouchers/external/report/redis/unlock,
+Partner External,get,/findcarecovidsvc/svc/v2/partner/vouchers/external/report,
+Partner Test,post,/findcarecovidsvc/svc/v2/partner/vouchers/test/bwell,
